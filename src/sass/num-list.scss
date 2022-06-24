@@ -1,0 +1,33 @@
+$mark-size: 28px;
+$list-horizontal-space: 14px;
+
+.num-list {
+  counter-reset: list;
+
+  &__item {
+    position: relative;
+    margin-left: calc($mark-size + $list-horizontal-space);
+    padding: 22px 16px;
+
+    &::before {
+      counter-increment: list;
+      content: counter(list);
+
+      position: absolute;
+      left: calc(0px - $list-horizontal-space);
+      @include size($mark-size);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 23px;
+      color: $contrast-color;
+      border: solid 2px $contrast-color;
+      border-radius: 50%;
+
+      transform: translateX(-50%);
+    }
+  }
+}

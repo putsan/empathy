@@ -1,3 +1,4 @@
+@import url(../fonts/mont/stylesheet.css);
 * {
   box-sizing: border-box;
 }
@@ -10,7 +11,8 @@ h4,
 h5,
 h6,
 p,
-ul {
+ul,
+ol {
   margin: 0;
 }
 
@@ -18,7 +20,8 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul,
+ol {
   padding-left: 0;
 }
 
@@ -33,36 +36,70 @@ textarea {
   border: none;
 }
 
-@font-face {
-  font-family: "Quantum";
-  src: url("../fonts/Quantum-400.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Mark-Regular";
-  src: url("../fonts/FontFont_FF.Mark.Pro.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Mark-Heavy";
-  src: url("../fonts/FontFont_FF.Mark.Pro.Heavy.otf");
-  font-weight: normal;
-  font-style: normal;
-}
 html {
-  font-family: "Mark-Regular", sans-serif;
-  color: blue;
-  line-height: 150%;
+  font-family: "Mont", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #444;
+  line-height: 18px;
   scroll-behavior: smooth;
 }
 
 body {
-  background: yellow;
+  background: #F8F9F8;
   overflow-x: hidden;
 }
 
 .main--active {
   display: none;
+}
+
+.section-title {
+  font-family: "Mont";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+  display: flex;
+  text-transform: uppercase;
+}
+
+.row {
+  padding: 0 20px;
+  margin-bottom: 48px;
+}
+
+.num-list {
+  counter-reset: list;
+}
+.num-list__item {
+  position: relative;
+  margin-left: 42px;
+  padding: 22px 16px;
+}
+.num-list__item::before {
+  counter-increment: list;
+  content: counter(list);
+  position: absolute;
+  left: -14px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #3963BC;
+  border: solid 2px #3963BC;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.about__image {
+  width: 157px;
+}
+
+.post__image {
+  width: 280px;
 }
