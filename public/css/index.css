@@ -1,8 +1,4 @@
 @import url(../fonts/mont/stylesheet.css);
-* {
-  box-sizing: border-box;
-}
-
 body,
 h1,
 h2,
@@ -36,6 +32,10 @@ textarea {
   border: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Mont", sans-serif;
   font-size: 12px;
@@ -64,9 +64,54 @@ body {
   text-transform: uppercase;
 }
 
+.experience {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px 0 46px;
+  padding: 42px 0;
+  overflow-x: hidden;
+}
+.experience::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 444px;
+  height: 444px;
+  top: 0;
+  border: 2px solid #3963BC;
+  border-radius: 50%;
+  box-sizing: border-box;
+  opacity: 0.2;
+}
+.experience__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.experience__item:not(:last-child) {
+  margin-bottom: 42px;
+}
+.experience__number {
+  margin-bottom: 4px;
+  color: #3963BC;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+}
+.experience__label {
+  max-width: 100px;
+  text-align: center;
+  opacity: 0.7;
+}
+
 .row {
   padding: 0 20px;
   margin-bottom: 48px;
+}
+.row__title {
+  margin-bottom: 32px;
 }
 
 .num-list {
@@ -95,11 +140,76 @@ body {
   border-radius: 50%;
   transform: translateX(-50%);
 }
+.num-list__text {
+  opacity: 0.7;
+}
 
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .about__image {
   width: 157px;
+}
+.about__text {
+  opacity: 0.7;
+}
+.about__text::before {
+  content: "";
+  display: block;
+  margin: 32px 0;
+  border-bottom: 1px solid #AEC0E3;
+}
+.about__paragraph:not(:last-child) {
+  margin-bottom: 12px;
+}
+.about__accent {
+  color: #3963BC;
+}
+
+.price__item::after {
+  content: "";
+  display: block;
+  margin: 14px 0;
+  border-bottom: 1px solid #7c7c7c;
+}
+.price__label {
+  padding: 14px 0 18px;
+  opacity: 0.7;
+}
+.price__value {
+  font-size: 14px;
+  font-weight: 700;
+}
+.price__time {
+  opacity: 0.7;
 }
 
 .post__image {
   width: 280px;
+}
+
+.contact {
+  background-color: #3963BC;
+}
+
+.footer {
+  display: flex;
+  padding: 12px 70px;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__logo {
+  width: 74px;
+  height: auto;
+  margin-bottom: 12px;
+}
+.footer__rights {
+  text-align: center;
+  white-space: pre-line;
+  opacity: 0.7;
+}
+.footer__link {
+  color: #3963BC;
 }

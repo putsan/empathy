@@ -1,0 +1,52 @@
+.experience {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 48px 0 46px;
+  padding: 42px 0;
+
+  overflow-x: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    @include size(444px);
+    top: 0;
+
+    border: 2px solid $contrast-color;
+    border-radius: 50%;
+
+    box-sizing: border-box;
+    opacity: 0.2;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__number {
+    margin-bottom: 4px;
+
+    color: $contrast-color;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+  }
+
+  &__label {
+    max-width: 100px;
+
+    text-align: center;
+
+    opacity: 0.7;
+  }
+}

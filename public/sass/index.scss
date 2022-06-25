@@ -1,6 +1,10 @@
 @import "utils";
 @import "fonts";
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Mont", sans-serif;
   font-size: $mob-font-size;
@@ -26,9 +30,12 @@ body {
 
 @import "section-title";
 @import "header";
+@import "experience";
 @import "row";
 
 @import "num-list";
 @import "about";
+@import "price";
 @import "post";
+@import "contact";
 @import "footer";

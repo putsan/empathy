@@ -3,6 +3,27 @@
   height: $_height;
 }
 
+@mixin line-styles($_space, $_color) {
+  content: '';
+  display: block;
+  margin: $_space 0;
+
+  border-bottom: 1px solid $_color;
+}
+
+@mixin line($_space: 14px, $_color: $gray, $_before: false) {
+
+  @if $_before {
+    &::before {
+      @include line-styles($_space, $_color);
+    }
+  } @else {
+    &::after {
+      @include line-styles($_space, $_color);
+    }
+  }
+}
+
 @mixin hover($_property, $_toValue) {
   transition: #{$_property} $main-hover-duration;
   &:hover {
