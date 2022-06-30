@@ -1,0 +1,96 @@
+$nav-height: 62px;
+
+.navigation {
+  position: relative;
+  height: $nav-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+  &__left {
+    display: flex;
+    height: 24px;
+    align-items: center;
+  }
+
+  &__menu-btn {
+
+  }
+
+  &__line {
+    height: 100%;
+    width: 0.5px;
+    margin: 0 12px;
+
+    background-color: $text-color;
+    opacity: 0.3;
+  }
+
+  &__logo {
+    height: 18.5px;
+  }
+
+  &__menu {
+    // display: none;
+    position: absolute;
+    top: $nav-height;
+    left: 0;
+    width: 100%;
+    height: 0;
+    padding: 0 20px;
+
+    background: $background-color;
+    // transform: translateY(-100%);
+    // z-index: -1;
+    // opacity: 0;
+    overflow: hidden;
+
+    &--active {
+      height: 50vw;
+      min-height: 175px;
+      padding-top: 26px;
+    }
+  }
+
+  &__list {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $contrast-color;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 100%;
+
+    color: $text-color;
+    // font-family: "Mont";
+    // font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    background: none;
+    border-radius: 34px;
+  }
+
+  &__btn-link {
+    @include size(110px, 31px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Mont;
+    font-size: 12px;
+    line-height: 15px;
+    color: $contrast-color;
+
+    border: 1.5px solid $contrast-color;
+    border-radius: 34px;
+  }
+}

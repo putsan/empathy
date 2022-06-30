@@ -1,0 +1,21 @@
+.pinned {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 48px;
+
+  &__link {
+    display: inline-block;
+    height: 48px;
+
+    border-radius: 50%;
+
+    &:first-child {
+      box-shadow: 6px 6px 38px rgba(121, 101, 89, 0.18);
+    }
+
+    &:last-child {
+      margin-left: 12px;
+    }
+  }
+}

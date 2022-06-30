@@ -1,3 +1,75 @@
 .contact {
+  position: relative;
+  padding: 43px 20px 52px;
+
+  color: $background-color;
   background-color: $contrast-color;
+
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 197.33px;
+    height: 222px;
+    right: -78px;
+    bottom: 30px;
+
+    background: center / auto 222px no-repeat url("../images/head.svg");
+    opacity: 0.2;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__form {
+
+
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    & *:not(:first-child) {
+      opacity: 0.7;
+    }
+  }
+
+  &__part-title {
+    margin-bottom: 32px;
+
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  & a:nth-child(3),
+  & a:nth-child(5) {
+    margin: 4px 0 12px;
+  }
+
+  &__mail {
+    color: inherit;
+  }
+
+  &__phone {
+    color: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 156px;
+
+    color: inherit;
+    white-space: pre-line;
+  }
 }

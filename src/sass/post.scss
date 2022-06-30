@@ -1,5 +1,78 @@
+#posts {
+  margin-bottom: 90px;
+}
+
 .post {
+  @include line(none);
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
   &__image {
     width: 280px;
+    margin: 24px 0 18px;
+  }
+
+  &__date {
+    font-family: "Mont";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $contrast-color;
+
+    opacity: 0.7;
+  }
+
+  &__title {
+    margin: 6px 0 24px;
+
+    font-family: "Mont";
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    @include text-overflow(4);
+
+    &--visible {
+      @include text-overflow(initial, $_initial: true);
+    }
+  }
+
+  &__paragraph {
+    line-height: 18px;
+
+    opacity: 0.7;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    margin-top: 24px;
+
+    font-weight: 700;
+  }
+
+  &__author {
+  }
+
+  &__contacts {
+    text-align: right;
+  }
+
+  &__phone {
+    color: inherit;
+  }
+
+  &__button {
+    display: block;
+    margin: 32px auto 24px;
   }
 }

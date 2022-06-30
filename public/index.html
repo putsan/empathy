@@ -1,36 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk-UA">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ваш психолог у Львові: консультації, тренінги, коучинг ❘ Підгородний</title>
     <link
       rel="shortcut icon"
-      href="./images/icons/favicon.svg"
+      href="./images/favicon.svg"
       type="image/x-icon"
     >
     <link rel="stylesheet" href="./css/index.css">
     <link href = "fonts/mont/stylesheet.css" rel = "stylesheet" type = "text/css" />
   </head>
   <body>
-    <header>
+    <header id="header">
       <nav class="navigation">
+        <div class="navigation__left">
+          <img src="./images/menu.svg" class="navigation__menu-btn" alt="">
+          <div class="navigation__line"></div>
+          <img src="./images/logo.png" alt="Емпатія" class="navigation__logo">
+        </div>
 
+        <div class="navigation__menu">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#services" class="navigation__link">послуги</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#about" class="navigation__link">Про мене</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#prices" class="navigation__link">Ціни</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#posts" class="navigation__link">Статті</a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="navigation__button">
+          <a href="#contact-form" class="navigation__btn-link">
+            Записатись
+          </a>
+        </button>
       </nav>
 
       <div class="intro">
-        <img src="" alt="" class="poster">
+        <div class="intro__container">
+          <img src="./images/poster-mob.jpg" alt="На фото Підгородний  Павло Михайлович" class="intro__poster">
+        </div>
 
-        <p class="pre-title">Психолог Підгородний</p>
-        <h1 class="page-title section-title">Консультація психолога у Львові</h1>
-        <p class="sub-title">Завжди в житті з довірою.</p>
+        <div class="intro__poster-content">
+          <p class="intro__pre-title">Психолог Підгородний</p>
+          <h1 class="intro__page-title section-title">Консультація психолога у Львові</h1>
+          <p class="intro__sub-title">Завжди в житті з довірою.</p>
 
-        <button class="button">
-          <a href="#" class="button__link">
-            <span class="button__text">Записатись</span>
-            <img src="" alt="" class="button__icon">
-          </a>
-        </button>
+          <button class="button">
+            <a href="#contact-form" class="button__link">
+              <span class="button__text">Записатись</span>
+            </a>
+          </button>
+        </div>
 
         <ul class="experience">
           <li class="experience__item">
@@ -53,7 +83,7 @@
     </header>
 
     <main>
-      <section class="row">
+      <section class="row" id="services">
         <h2 class="section-title row__title">Послуги</h2>
 
         <ol class="num-list">
@@ -90,7 +120,7 @@
         </ol>
       </section>
 
-      <section class="row">
+      <section class="row" id="about">
         <h2 class="section-title row__title">Про мене</h2>
 
         <div class="about">
@@ -112,7 +142,7 @@
         </div>
       </section>
 
-      <section class="row">
+      <section class="row" id="prices">
         <h2 class="section-title row__title">ціни</h2>
 
         <ol class="price">
@@ -155,11 +185,43 @@
         </ol>
       </section>
 
-      <section class="row">
+      <section class="row" id="posts">
         <h2 class="section-title row__title">Статті</h2>
 
         <article class="post">
-          <img src="./images/articles/1.jpg" alt='Зображення до статті на тему "Зв’язок з психологом Львів"' class="post__image">
+          <img src="./images/articles/1-mob.jpg" alt='Зображення до статті на тему "Зв’язок з психологом Львів"' class="post__image">
+
+          <time class="post__date" datetime="2021-06-13 19:00">13 червня  2022</time>
+
+          <h3 class="post__title">Зв’язок з психологом Львів</h3>
+
+          <main class="post__content">
+            <p class="post__paragraph">
+              Психолог не є вашим другом. Клієнт платить гроші за його роботу. Це довірча особа, якій можна розповісти особисту інформацію. <b>Зв’язок з психологом</b> повинен бути зворотнім. Тримайте <b>зв’язок з психологом Львів</b> через контакти на нашому сайті. Впевнені, що співробітництво допоможе кожному повернутися до нормального життя через які труднощі вам не довелося пройти. Досвідчений психолог знає що робити.
+            </p>
+            <p class="post__paragraph">
+              Практично всі ми діти батьків, що постійно працювали та не приділяли достатнього часу нам. З цього виходить, що ми ділилися своїми враженнями, почуттями, хвилюваннями з оточуючими людьми, що не завжди використовувалося ними у мирних цілях. В свою чергу, це приводило до замкнутості. Сьогодні достатньо та фінансово доступно тримати <b>зв’язок з психологом</b>, щоб почуватися у гарному настрої. При цьому статеві стосунки між психологом та клієнтом неможливі при ініціативі з будь-якого боку. Це один з принципів психології. Ви оплачуєте роботу, пов’язану з професійною діяльністю. Але при необхідності доступно фліртувати, якщо це буде одним з видів психологічної допомоги.
+            </p>
+            <p class="post__paragraph">
+              <b>Зв’язок з психологом Львів</b> краще замовляти в нас, тому що ми використовуємо сучасні знання в області психотерапії. Від фахівця теж багато чого залежить, тому вас буде обслуговувати досвідчений спеціаліст. Довірте йому свої таємниці, він зрозуміє стан вашого психічного здоров’я та прийме всіх необхідних заходів для нормалізації процесів.
+            </p>
+
+            <div class="post__footer">
+              <p class="post__author">Підгородний  Павло Михайлович</p>
+              <p class="post__contacts">Тел. <a class="post__phone" href="tel:+380632404508">0632404508</a> <a class="post__phone" href="tel:+380679802165">0679802165</a></p>
+            </div>
+          </main>
+
+          <button class="post__button button button--gray button--s">
+            <a href="#" class="button__link">
+              <span class="button__text">Читати далі</span>
+              <img src="" alt="" class="button__icon">
+            </a>
+          </button>
+        </article>
+
+        <article class="post">
+          <img src="./images/articles/1-mob.jpg" alt='Зображення до статті на тему "Зв’язок з психологом Львів"' class="post__image">
 
           <time class="post__date">13 червня  2022</time>
 
@@ -179,20 +241,53 @@
 
           <div class="post__footer">
             <p class="post__author">Підгородний  Павло Михайлович</p>
-            <p class="post__contacts">Тел. <a href="tel:+380632404508">0632404508</a> <a href="tel:+380679802165">0679802165</a></p>
+            <p class="post__contacts">Тел. <a class="post__phone" href="tel:+380632404508">0632404508</a> <a class="post__phone" href="tel:+380679802165">0679802165</a></p>
           </div>
 
-          <button class="post__button button">
+          <button class="post__button button button--gray button--s">
             <a href="#" class="button__link">
-              <span class="button__text">Записатись</span>
+              <span class="button__text">Читати далі</span>
               <img src="" alt="" class="button__icon">
             </a>
           </button>
         </article>
       </section>
 
-      <section class="contact">
-        ccc
+      <section class="contact" id="contact-form">
+        <h3 class="contact__title">записатись</h3>
+
+        <form action="" method="get" class="contact__form form">
+          <input placeholder="Імʼя" type="text" name="name" id="username" class="form__input">
+          <input placeholder="Email" type="email" name="Email" id="user-email" class="form__input">
+          <input placeholder="Моб. телефон" type="number" name="phone" id="user-phone" class="form__input">
+
+          <textarea placeholder="Ваш коментар" name="comment" id="user-comment" cols="30" rows="10" class="form__area"></textarea>
+
+          <label for="agrred-with-policy" class="form__policy">
+            <input type="checkbox" name="policy" id="agrred-with-policy" class="form__checkbox">
+            <span class="form__policy-text">Я даю свою згоду на обробку персональних даних</span>
+          </label>
+
+          <button type="submit" class="form__button">Записатись</button>
+        </form>
+
+        <div class="contact__contacts">
+          <h4 class="contact__part-title">
+            Контактні дані
+          </h4>
+
+          <a href="mailto:pidgorodniy24@gmail.com" class="contact__mail">pidgorodniy24@gmail.com</a>
+          <a href="mailto:pidgorodniy24@ukr.net" class="contact__mail">pidgorodniy24@ukr.net</a>
+
+          <a href="tel:+38067-980-21-65" class="contact__phone">067-980-21-65</a>
+          <a href="tel:+38063-240-45-08" class="contact__phone">063-240-45-08</a>
+
+          <p class="contact__address">
+            <a href="https://goo.gl/maps/BSxatAhcwLMQgNf56" class="contact__link" target="_blank">м. Львів,
+              вул. Бузкова 2 (корпус Б)  3-й поверх, кім. 312.
+            </a>
+          </p>
+        </div>
       </section>
     </main>
 
@@ -200,10 +295,20 @@
       <img src="./images/logo.png" alt="Логотип Емпатія" class="footer__logo">
 
       <p class="footer__rights">Created by
-        <a href="#" class="footer__link">Yurii Tarasenko</a> & <a a href="#" class="footer__link">Yuriy Putsan</a>
+        <a href="https://www.behance.net/yuriytarasenko" class="footer__link" target="_blank">Yurii Tarasenko</a> & <a href="https://cutt.ly/yp_site" class="footer__link" target="_blank">Yuriy Putsan</a>
         All rights reserved.
       </p>
     </footer>
+
+    <div class="pinned">
+      <a class="pinned__link" href="#header">
+        <img src="./images/to-top.svg" alt="Go to top" class="pinned__ico">
+      </a>
+
+      <a class="pinned__link" href="tel:+38067-980-21-65">
+        <img src="./images/phone.svg" alt="Call" class="pinned__ico">
+      </a>
+    </div>
     <script type="text/javascript" src="scripts/index.js"></script>
   </body>
 </html>

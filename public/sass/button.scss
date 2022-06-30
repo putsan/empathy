@@ -1,0 +1,51 @@
+.button {
+  color: $contrast-color;
+  font-family: Mont;
+  font-size: 14px;
+  line-height: 18px;
+
+  background: none;
+
+  &--gray {
+    color: $text-color;
+
+    & > .button__link::after {
+      background-color: $text-color;
+
+      // transform: rotate(-90deg);
+    }
+  }
+
+  &--s {
+    font-size: 12px;
+    line-height: 15px;
+
+    & > .button__link::after {
+      @include size(28px);
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    height: 100%;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+
+    white-space: nowrap;
+
+    &::after {
+      content: url("../images/arrow-right.svg");
+
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      @include size(42px);
+      margin-left: 15px;
+
+      background-color: $contrast-color;
+      border-radius: 50%;
+    }
+  }
+}
