@@ -24,6 +24,29 @@
   }
 }
 
+@mixin text-overflow($_lines-count: initial, $_initial: false) {
+  @if $_initial {
+    display: initial;
+    -webkit-line-clamp: initial;
+    -webkit-box-orient: initial;
+
+    text-overflow: initial;
+
+    overflow: hidden;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: #{$_lines-count};
+    -webkit-box-orient: vertical;
+
+    text-overflow: ellipsis;
+
+    overflow: hidden;
+  }
+}
+
+/* End of Used Mixins
+-------------------------------------------------- */
+
 @mixin hover($_property, $_toValue) {
   transition: #{$_property} $main-hover-duration;
   &:hover {
@@ -38,15 +61,7 @@
   }
 }
 
-@mixin text-owerflow($count) {
-  display: -webkit-box;
-  -webkit-line-clamp: #{$count};
-  -webkit-box-orient: vertical;
 
-  text-overflow: ellipsis;
-
-  overflow: hidden;
-}
 
 @mixin paragraph-title($bootom-space) {
   padding-bottom: $bootom-space;
