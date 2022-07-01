@@ -1,9 +1,45 @@
-$contrast-color: #3963BC;
-$background-color: #F8F9F8;
-$dark-grey: #2f2f2f;
-$lite-blue: #AEC0E3;
+@import "./media-mixin";
+
+/*=============================================
+=                   Colors                   =
+=============================================*/
+$contrast-color: #3963bc;
+$background-color: #f8f9f8;
+$dark-grey: #8d7474;
+$lite-blue: #aec0e3;
 $text-color: #444;
 $gray: #7c7c7c;
+
+
+/*=============================================
+=                   Sizes                   =
+=============================================*/
+
+/* Fonts
+-------------------------------------------------- */
+$mob-font-size: 12px;
+$mob-line-height: 18px;
+
+$desktop-font-s: 14px;
+$desktop-font-m: 16px;
+
+/* Elements
+-------------------------------------------------- */
+:root {
+  --nav-height: 62px;
+  --logo-h-header: 18.5px;
+  // --logo-h-footer: 36px;
+}
+
+@include _768 {
+  :root {
+    --nav-height: 92px;
+    --logo-h-header: 36px;
+  }
+}
+/*============  End of Sizes  =============*/
+
+
 $white: #fff;
 $gradient-start: #191536;
 $gradient-end: #000;
@@ -21,8 +57,6 @@ $tech-img-round: #0e0c1e;
 
 $page-font-size: 16px;
 $page-line-height: 150%;
-$mob-font-size: 12px;
-$mob-line-height: 18px;
 //
 $header-title: 46px;
 $header-line: 130%;

@@ -1,0 +1,37 @@
+// Using
+//.div {
+//   @include _1170 {
+//       @content;
+//   }
+//}
+
+@mixin _1170 {
+  @media (min-width: 1171px){
+      @content;
+  }
+}
+@mixin _979 {
+  @media (min-width: 980px){
+      @content;
+  }
+}
+@mixin _768 {
+  @media (min-width: 769px){
+      @content;
+  }
+}
+@mixin _600 {
+  @media (min-width: 601px){
+      @content;
+  }
+}
+@mixin _480 {
+  @media (min-width: 481px){
+      @content;
+  }
+}
+@mixin _350{
+  @media (min-width: 351px){
+      @content;
+  }
+}

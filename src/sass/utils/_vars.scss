@@ -1,7 +1,45 @@
-$contrast-color: #05c2df;
-$background-color: yellow;
-$dark-grey: #2f2f2f;
-$text-color: blue;
+@import "./media-mixin";
+
+/*=============================================
+=                   Colors                   =
+=============================================*/
+$contrast-color: #3963bc;
+$background-color: #f8f9f8;
+$dark-grey: #8d7474;
+$lite-blue: #aec0e3;
+$text-color: #444;
+$gray: #7c7c7c;
+
+
+/*=============================================
+=                   Sizes                   =
+=============================================*/
+
+/* Fonts
+-------------------------------------------------- */
+$mob-font-size: 12px;
+$mob-line-height: 18px;
+
+$desktop-font-s: 14px;
+$desktop-font-m: 16px;
+
+/* Elements
+-------------------------------------------------- */
+:root {
+  --nav-height: 62px;
+  --logo-h-header: 18.5px;
+  // --logo-h-footer: 36px;
+}
+
+@include _768 {
+  :root {
+    --nav-height: 92px;
+    --logo-h-header: 36px;
+  }
+}
+/*============  End of Sizes  =============*/
+
+
 $white: #fff;
 $gradient-start: #191536;
 $gradient-end: #000;

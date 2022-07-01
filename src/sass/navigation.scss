@@ -1,21 +1,25 @@
-$nav-height: 62px;
-
 .navigation {
   position: relative;
-  height: $nav-height;
+  height: var(--nav-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
 
+  @include _768 {
+    padding: 0 10px;
+  }
+
   &__left {
     display: flex;
     height: 24px;
     align-items: center;
-  }
 
-  &__menu-btn {
-
+    @include _768 {
+      & > *:not(:last-child) {
+        display: none;
+      }
+    }
   }
 
   &__line {
@@ -29,12 +33,16 @@ $nav-height: 62px;
 
   &__logo {
     height: 18.5px;
+
+    @include _768 {
+      height: 36px;
+    }
   }
 
   &__menu {
     // display: none;
     position: absolute;
-    top: $nav-height;
+    top: var(--nav-height);
     left: 0;
     width: 100%;
     height: 0;
@@ -51,15 +59,38 @@ $nav-height: 62px;
       min-height: 175px;
       padding-top: 26px;
     }
+
+    @include _768 {
+      position: initial;
+      height: initial;
+    }
   }
 
   &__list {
+    height: 100%;
     padding-bottom: 10px;
+
     border-bottom: 1px solid $contrast-color;
+
+    @include _768 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include flexGap(34px, $element: li);
+      padding-bottom: 0;
+
+      border: none;
+    }
   }
 
   &__item:not(:last-child) {
     margin-bottom: 16px;
+  }
+
+  .navigation__list &__item {
+    @include _768 {
+      margin-bottom: initial;
+    }
   }
 
   &__link {
@@ -72,6 +103,10 @@ $nav-height: 62px;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+
+    @include _768 {
+      text-transform: none;
+    }
   }
 
   &__button {
@@ -86,11 +121,19 @@ $nav-height: 62px;
     justify-content: center;
 
     font-family: Mont;
-    font-size: 12px;
+    font-size: $mob-font-size;
     line-height: 15px;
     color: $contrast-color;
 
     border: 1.5px solid $contrast-color;
     border-radius: 34px;
+
+    @include _768 {
+      @include size(146px, 44px);
+
+      font-size: $desktop-font-m;
+
+      border-width: 2px;
+    }
   }
 }
