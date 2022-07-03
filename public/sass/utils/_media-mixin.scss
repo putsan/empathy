@@ -4,34 +4,35 @@
 //       @content;
 //   }
 //}
+$max-screen-width: 100vw;
 
-@mixin _1170 {
-  @media (min-width: 1171px){
+@mixin _1170 ($_max-width: $max-screen-width) {
+  @media (min-width: 1171px) and (max-width: $_max-width) {
       @content;
   }
 }
-@mixin _979 {
-  @media (min-width: 980px){
+@mixin _979 ($_max-width: $max-screen-width) {
+  @media (min-width: 980px) and (max-width: $_max-width) {
       @content;
   }
 }
-@mixin _768 {
-  @media (min-width: 769px){
+@mixin _768 ($_max-width: $max-screen-width) {
+  @media (min-width: 769px) and (max-width: $_max-width){
       @content;
   }
 }
-@mixin _600 {
-  @media (min-width: 601px){
+@mixin _600 ($_max-width: $max-screen-width) {
+  @media (min-width: 601px) and (max-width: $_max-width) {
       @content;
   }
 }
-@mixin _480 {
-  @media (min-width: 481px){
+@mixin _480 ($_max-width: $max-screen-width) {
+  @media (min-width: 481px) and (max-width: $_max-width) {
       @content;
   }
 }
-@mixin _350{
-  @media (min-width: 351px){
+@mixin _350($_max-width: $max-screen-width) {
+  @media (min-width: 351px) and (max-width: $_max-width) {
       @content;
   }
 }

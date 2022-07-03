@@ -44,10 +44,10 @@
   }
 }
 
-@mixin flexGap( $gap, $direction: row, $element: div ) {
-  > #{$element} {
-    @if $direction == row {
-      margin: 0 $gap/2;
+@mixin flexGap( $_gap, $_direction: row, $_element: div, $_vertical-gap: $_gap, $_columns: 3 ) {
+  > #{$_element} {
+    @if $_direction == row {
+      margin: 0 $_gap/2;
       &:first-child {
         margin-left: 0;
       }
@@ -57,14 +57,34 @@
       }
     }
 
-    @if $direction == column {
-      margin: $gap/2 0;
+    @if $_direction == column {
+      margin: $_gap/2 0;
       &:first-child {
         margin-top: 0;
       }
 
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    @if $_direction == net {
+      margin: $_vertical-gap/2 $_gap/2;
+
+      &:nth-child(-n + #{$_columns}) {
+        margin-top: 0;
+      }
+
+      &:nth-last-child(-n + #{$_columns}) {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(#{$_columns}n + 1) {
+        margin-left: 0;
+      }
+
+      &:nth-child(#{$_columns}n + #{$_columns}) {
+        margin-right: 0;
       }
     }
   }

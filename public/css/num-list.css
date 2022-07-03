@@ -1,9 +1,12 @@
 /* Error: Undefined mixin.
  *    ,
- * 18 |       @include size($mark-size);
- *    |       ^^^^^^^^^^^^^^^^^^^^^^^^^
+ * 7  | /   @include _768 {
+ * 8  | |     display: flex;
+ * 9  | |     flex-wrap: wrap;
+ * 10 | |     justify-content: space-between;
+ * 11 | \   }
  *    '
- *   src\sass\num-list.scss 18:7  root stylesheet */
+ *   src/sass/num-list.scss 7:3  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +16,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 18 \2502        @include size($mark-size);\a    \2502        ^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   src\\sass\\num-list.scss 18:7  root stylesheet";
+  content: "Error: Undefined mixin.\a    \2577 \a 7  \2502  \250c    @include _768 {\a 8  \2502  \2502      display: flex;\a 9  \2502  \2502      flex-wrap: wrap;\a 10 \2502  \2502      justify-content: space-between;\a 11 \2502  \2514    }\a    \2575 \a   src/sass/num-list.scss 7:3  root stylesheet";
 }

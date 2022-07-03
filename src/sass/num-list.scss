@@ -1,21 +1,49 @@
-$mark-size: 28px;
-$list-horizontal-space: 14px;
+$num-l-gap-h: 20px;
+$num-l-gap-v: 32px;
 
 .num-list {
   counter-reset: list;
 
+  @include _768 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include _768(978px) {
+    @include flexGap($num-l-gap-h, net, li, $num-l-gap-v, 2);
+  }
+
+  @include _979 {
+    @include flexGap($num-l-gap-h, net, li, $num-l-gap-v, 3);
+  }
+
   &__item {
     position: relative;
-    margin-left: calc($mark-size + $list-horizontal-space);
-    padding: 22px 16px;
+    padding: 22px var(--mob-l-item-padding-horizontal);
+    padding-left: calc(
+      var(--mark-size) + var(--list-horizontal-space) +
+        var(--mob-l-item-padding-horizontal)
+    );
+
+    @include _768 {
+      width: calc(50% - $num-l-gap-h);
+      max-width: 387px;
+      margin: 0;
+      padding-left: calc(var(--mark-size) + var(--list-horizontal-space));
+    }
+
+    @include _979 {
+      width: calc(33.33% - $num-l-gap-h);
+    }
 
     &::before {
       counter-increment: list;
       content: counter(list);
 
       position: absolute;
-      left: calc(0px - $list-horizontal-space);
-      @include size($mark-size);
+      left: var(--mob-l-item-padding-horizontal);
+      @include size(var(--mark-size));
       display: flex;
       justify-content: center;
       align-items: center;
@@ -27,7 +55,11 @@ $list-horizontal-space: 14px;
       border: solid 2px $contrast-color;
       border-radius: 50%;
 
-      transform: translateX(-50%);
+      box-sizing: border-box;
+
+      @include _768 {
+        left: 0;
+      }
     }
   }
 

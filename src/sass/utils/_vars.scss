@@ -10,7 +10,6 @@ $lite-blue: #aec0e3;
 $text-color: #444;
 $gray: #7c7c7c;
 
-
 /*=============================================
 =                   Sizes                   =
 =============================================*/
@@ -29,16 +28,32 @@ $desktop-font-m: 16px;
   --nav-height: 62px;
   --logo-h-header: 18.5px;
   // --logo-h-footer: 36px;
+  --mark-size: 28px;
 }
 
 @include _768 {
   :root {
     --nav-height: 92px;
     --logo-h-header: 36px;
+    --mark-size: 42px;
+  }
+}
+
+/* Spaces
+-------------------------------------------------- */
+:root {
+  --vertical-space: 20px;
+  --list-horizontal-space: 14px;
+  --mob-l-item-padding-horizontal: 16px;
+}
+
+@include _768 {
+  :root {
+    --vertical-space: 50px;
+    --list-horizontal-space: 18px;
   }
 }
 /*============  End of Sizes  =============*/
-
 
 $white: #fff;
 $gradient-start: #191536;
