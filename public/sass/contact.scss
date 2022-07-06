@@ -7,6 +7,15 @@
 
   overflow: hidden;
 
+  @include _768 {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      width: 100%;
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -17,6 +26,15 @@
 
     background: center / auto 222px no-repeat url("../images/head.svg");
     opacity: 0.2;
+
+    @include _768 {
+      width: 590px;
+      height: 663.75px;
+      right: -84px;
+      bottom: -120px;
+
+      background-size: auto 663.75px;
+    }
   }
 
   &__title {
@@ -27,8 +45,9 @@
   }
 
   &__form {
-
-
+    @include _768 {
+      width: 60%;
+    }
   }
 
   &__contacts {
@@ -37,6 +56,10 @@
 
     & *:not(:first-child) {
       opacity: 0.7;
+    }
+
+    @include _768 {
+      width: 40%;
     }
   }
 

@@ -2,13 +2,21 @@
   display: flex;
   padding: 12px 70px;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
+
+  @include _768 {
+    padding: 27px 70px;
+  }
 
   &__logo {
     width: 74px;
     height: auto;
     margin-bottom: 12px;
+
+    @include _480 {
+      width: 110px;
+      margin-bottom: 24px;
+    }
   }
 
   &__rights {
@@ -16,9 +24,21 @@
     white-space: pre-line;
 
     opacity: 0.7;
+
+    @include _480 {
+      line-height: 18px;
+      white-space: initial;
+    }
   }
 
   &__link {
     color: $contrast-color;
+
+    @include _480 {
+      &:last-child::after {
+        content: ".";
+        margin-left: 2px;
+      }
+    }
   }
 }

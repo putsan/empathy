@@ -3,26 +3,43 @@
 }
 
 .post {
-  @include line(none);
+  position: relative;
+
+  @include line(0, rgba(68, 68, 68, 0.4));
 
   &:not(:last-child) {
     margin-bottom: 24px;
+
+    @include _480 {
+      margin-bottom: 48px;
+    }
   }
 
   &__image {
-    width: 280px;
+    width: 100%;
     margin: 24px 0 18px;
+
+    @include _480 {
+      margin-top: 0;
+    }
   }
 
   &__date {
+    display: block;
+
     font-family: "Mont";
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: $mob-font-size;
+    line-height: $mob-line-height;
     color: $contrast-color;
 
     opacity: 0.7;
+
+    @include _480 {
+      font-size: $desktop-font-s;
+    line-height: $desktop-lh;
+    }
   }
 
   &__title {
@@ -33,6 +50,10 @@
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+
+    @include _480 {
+      margin: 12px 0 14px;
+    }
   }
 
   &__content {
@@ -44,12 +65,16 @@
   }
 
   &__paragraph {
-    line-height: 18px;
+    line-height: $mob-line-height;
 
     opacity: 0.7;
 
     &:not(:last-child) {
       margin-bottom: 12px;
+    }
+
+    @include _480 {
+      line-height: $desktop-lh;
     }
   }
 
@@ -58,9 +83,27 @@
     margin-top: 24px;
 
     font-weight: 700;
+
+    @include _480 {
+      position: absolute;
+      bottom: calc(42px + (var(--button-size) / 2));
+      flex-wrap: wrap;
+
+      font-weight: 600;
+
+      transform: translateY(50%);
+    }
   }
 
   &__author {
+    @include _480 {
+      width: 100%;
+      margin-right: 42px;
+    }
+
+    @include _980 {
+      width: initial;
+    }
   }
 
   &__contacts {
@@ -69,10 +112,21 @@
 
   &__phone {
     color: inherit;
+
+    @include _480 {
+      &:first-child::after {
+        content: '/';
+        margin-left: 4px;
+      }
+    }
   }
 
   &__button {
     display: block;
     margin: 32px auto 24px;
+
+    @include _480 {
+      margin: 42px 0 42px auto;
+    }
   }
 }

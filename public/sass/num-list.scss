@@ -14,7 +14,7 @@ $num-l-gap-v: 32px;
     @include flexGap($num-l-gap-h, net, li, $num-l-gap-v, 2);
   }
 
-  @include _979 {
+  @include _980 {
     @include flexGap($num-l-gap-h, net, li, $num-l-gap-v, 3);
   }
 
@@ -33,7 +33,7 @@ $num-l-gap-v: 32px;
       padding-left: calc(var(--mark-size) + var(--list-horizontal-space));
     }
 
-    @include _979 {
+    @include _980 {
       width: calc(33.33% - $num-l-gap-h);
     }
 
@@ -50,7 +50,7 @@ $num-l-gap-v: 32px;
 
       font-weight: 700;
       font-size: 18px;
-      line-height: 23px;
+      line-height: 24px;
       color: $contrast-color;
       border: solid 2px $contrast-color;
       border-radius: 50%;

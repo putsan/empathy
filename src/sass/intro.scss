@@ -4,6 +4,10 @@
     height: 48vw;
     max-height: 300px;
     overflow: hidden;
+
+    @include _480 {
+      max-height: 600px;
+    }
   }
 
   &__poster {

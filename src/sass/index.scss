@@ -13,6 +13,11 @@ html {
   line-height: $mob-line-height;
 
   scroll-behavior: smooth;
+
+  @include _768 {
+    font-size: $desktop-font-s;
+    line-height: $desktop-lh;
+  }
 }
 
 body {

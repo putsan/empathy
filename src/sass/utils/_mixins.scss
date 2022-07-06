@@ -3,8 +3,24 @@
   height: $_height;
 }
 
-@mixin line-styles($_space, $_color) {
-  content: '';
+@mixin line-styles(
+  $_space,
+  $_color,
+  $_absolute: false,
+  $_top: initial,
+  $_right: initial,
+  $_bottom: initial,
+  $_left: initial
+) {
+  @if $_absolute {
+    position: absolute;
+    top: $_top;
+    right: $_right;
+    bottom: $_bottom;
+    left: $_left;
+  }
+
+  content: "";
   display: block;
   margin: $_space 0;
 
@@ -12,7 +28,6 @@
 }
 
 @mixin line($_space: 14px, $_color: $gray, $_before: false) {
-
   @if $_before {
     &::before {
       @include line-styles($_space, $_color);
@@ -21,6 +36,20 @@
     &::after {
       @include line-styles($_space, $_color);
     }
+  }
+}
+
+@mixin line-absolute(
+  $_top: initial,
+  $_right: 0,
+  $_bottom: 0,
+  $_left: 0,
+  $_color: $gray
+) {
+  position: relative;
+
+  &::after {
+    @include line-styles(0, $_color, true, $_top, $_right, $_bottom, $_left);
   }
 }
 
@@ -44,7 +73,13 @@
   }
 }
 
-@mixin flexGap( $_gap, $_direction: row, $_element: div, $_vertical-gap: $_gap, $_columns: 3 ) {
+@mixin flexGap(
+  $_gap,
+  $_direction: row,
+  $_element: div,
+  $_vertical-gap: $_gap,
+  $_columns: 3
+) {
   > #{$_element} {
     @if $_direction == row {
       margin: 0 $_gap/2;
@@ -107,8 +142,6 @@
   }
 }
 
-
-
 @mixin paragraph-title($bootom-space) {
   padding-bottom: $bootom-space;
 
@@ -118,7 +151,7 @@
   text-transform: uppercase;
 }
 
-@mixin position($vertical, $horisontal, $type : absolute) {
+@mixin position($vertical, $horisontal, $type: absolute) {
   position: $type;
   top: $vertical;
   left: $horisontal;

@@ -1,9 +1,20 @@
-.section-title {
-  font-family: "Mont";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 31px;
-  display: flex;
-  text-transform: uppercase;
+/* Error: Undefined mixin.
+ *    ,
+ * 11 | /   @include _768 {
+ * 12 | |     font-size: 32px;
+ * 13 | |     line-height: 41px;
+ * 14 | |     color: $contrast-color;
+ * 15 | \   }
+ *    '
+ *   src/sass/section-title.scss 11:3  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 11 \2502  \250c    @include _768 {\a 12 \2502  \2502      font-size: 32px;\a 13 \2502  \2502      line-height: 41px;\a 14 \2502  \2502      color: $contrast-color;\a 15 \2502  \2514    }\a    \2575 \a   src/sass/section-title.scss 11:3  root stylesheet";
 }
