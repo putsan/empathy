@@ -38,9 +38,7 @@
 
     @include _768 {
       width: 50%;
-      display: flex;
-      justify-content: end;
-      align-items: center;
+      @include flex-centering($_justify: end);
     }
   }
 

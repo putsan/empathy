@@ -1,9 +1,9 @@
-/* Error: Undefined mixin.
- *   ,
- * 3 |   @include line(42px, $lite-blue);
- *   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   src/sass/form.scss 3:3  root stylesheet */
+/* Error: Undefined variable.
+ *    ,
+ * 18 |     color: $background-color;
+ *    |            ^^^^^^^^^^^^^^^^^
+ *    '
+ *   src/sass/form.scss 18:12  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 3 \2502    @include line(42px, $lite-blue);\a   \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src/sass/form.scss 3:3  root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 18 \2502      color: $background-color;\a    \2502             ^^^^^^^^^^^^^^^^^\a    \2575 \a   src/sass/form.scss 18:12  root stylesheet";
 }

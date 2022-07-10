@@ -3,17 +3,24 @@
   padding: 43px 20px 52px;
 
   color: $background-color;
-  background-color: $contrast-color;
 
   overflow: hidden;
 
   @include _768 {
     display: flex;
     flex-wrap: wrap;
+    padding: var(--horizontal-space);
 
     & > * {
       width: 100%;
     }
+  }
+
+  @include _1170 {
+    max-width: 1200px;
+    margin: auto;
+
+    overflow: visible;
   }
 
   &::after {
@@ -37,29 +44,60 @@
     }
   }
 
+  &__background {
+    background-color: $contrast-color;
+  }
+
   &__title {
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+
+    @include _768 {
+      font-size: 32px;
+      line-height: 41px;
+    }
   }
 
   &__form {
+    margin-top: 32px;
+
+    @include _max(767px) {
+      @include line(42px, $lite-blue);
+    }
+
     @include _768 {
+      width: 50%;
+      max-width: 387px;
+      margin-top: 48px;
+    }
+
+    @include _980 {
       width: 60%;
     }
   }
 
   &__contacts {
+    position: relative;
     display: flex;
     flex-direction: column;
 
+    z-index: 1;
+
     & *:not(:first-child) {
+      width: fit-content;
+
       opacity: 0.7;
     }
 
     @include _768 {
-      width: 40%;
+      max-width: 192px;
+      margin: 48px 0 0 60px;
+    }
+
+    @include _980 {
+      margin-left: 121px;
     }
   }
 
@@ -70,11 +108,20 @@
     line-height: 20px;
     font-weight: 600;
     text-transform: uppercase;
+
+    @include _768 {
+      font-size: 22px;
+      line-height: 28px;
+    }
   }
 
   & a:nth-child(3),
   & a:nth-child(5) {
     margin: 4px 0 12px;
+
+    @include _768 {
+      margin-bottom: 18px;
+    }
   }
 
   &__mail {

@@ -44,9 +44,7 @@ $num-l-gap-v: 32px;
       position: absolute;
       left: var(--mob-l-item-padding-horizontal);
       @include size(var(--mark-size));
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-centering($_justify: center);
 
       font-weight: 700;
       font-size: 18px;

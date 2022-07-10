@@ -42,3 +42,9 @@ $max-screen-width: 100vw;
       @content;
   }
 }
+
+@mixin _min($_min-width) {
+  @media (min-width: $_min-width) {
+      @content;
+  }
+}

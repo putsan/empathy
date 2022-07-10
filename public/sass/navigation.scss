@@ -1,19 +1,18 @@
 .navigation {
   position: relative;
   height: var(--nav-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-centering($_justify: space-between);
   padding: 0 20px;
 
   @include _768 {
-    padding: 0 10px;
+    max-width: calc(1200px + var(--vertical-space) * 2);
+    margin: auto;
+    padding: 0 var(--vertical-space);
   }
 
   &__left {
-    display: flex;
+    @include flex-centering;
     height: 24px;
-    align-items: center;
 
     @include _768 {
       & > *:not(:last-child) {
@@ -40,7 +39,6 @@
   }
 
   &__menu {
-    // display: none;
     position: absolute;
     top: var(--nav-height);
     left: 0;
@@ -49,15 +47,19 @@
     padding: 0 20px;
 
     background: $background-color;
-    // transform: translateY(-100%);
-    // z-index: -1;
-    // opacity: 0;
+
     overflow: hidden;
 
     &--active {
       height: 50vw;
       min-height: 175px;
       padding-top: 26px;
+      z-index: 3;
+
+      @include _480 {
+        height: 82vw;
+        max-height: 525px;
+      }
     }
 
     @include _768 {
@@ -73,13 +75,15 @@
     border-bottom: 1px solid $contrast-color;
 
     @include _768 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      @include flexGap(34px, $_element: li);
+      @include flex-centering($_justify: center);
+      @include flexGap(22px, $_element: li);
       padding-bottom: 0;
 
       border: none;
+    }
+
+    @include _980 {
+      @include flexGap(34px, $_element: li);
     }
   }
 
@@ -103,6 +107,7 @@
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+    white-space: nowrap;
 
     @include _768 {
       text-transform: none;
@@ -116,9 +121,7 @@
 
   &__btn-link {
     @include size(110px, 31px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-centering($_justify: center);
 
     font-family: Mont;
     font-size: $mob-font-size;

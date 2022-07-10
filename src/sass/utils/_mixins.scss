@@ -82,7 +82,7 @@
 ) {
   > #{$_element} {
     @if $_direction == row {
-      margin: 0 $_gap/2;
+      margin: 0 calc($_gap/2);
       &:first-child {
         margin-left: 0;
       }
@@ -93,7 +93,7 @@
     }
 
     @if $_direction == column {
-      margin: $_gap/2 0;
+      margin: calc($_gap/2) 0;
       &:first-child {
         margin-top: 0;
       }
@@ -104,7 +104,7 @@
     }
 
     @if $_direction == net {
-      margin: $_vertical-gap/2 $_gap/2;
+      margin: calc($_vertical-gap/2) calc($_gap/2);
 
       &:nth-child(-n + #{$_columns}) {
         margin-top: 0;
@@ -123,6 +123,13 @@
       }
     }
   }
+}
+
+@mixin flex-centering($_direction: row, $_justify: initial, $_align-it: center) {
+  display: flex;
+  flex-direction: $_direction;
+  justify-content: $_justify;
+  align-items: $_align-it;
 }
 
 /* End of Used Mixins
@@ -180,9 +187,4 @@
     border-color: $contrast-color;
     outline: none;
   }
-}
-
-@mixin page-centered {
-  max-width: 1060px;
-  margin: auto;
 }

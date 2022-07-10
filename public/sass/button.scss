@@ -15,6 +15,10 @@
     }
   }
 
+  @include _480 {
+    color: $background-color;
+  }
+
   @include _768 {
     font-size: 16px;
     line-height: 20px;
@@ -62,9 +66,8 @@
   }
 
   &__link {
-    display: flex;
+    @include flex-centering;
     height: 100%;
-    align-items: center;
 
     color: inherit;
     font-family: inherit;
@@ -83,6 +86,10 @@
     border-radius: 50%;
 
     box-shadow: 6px 6px 38px rgba(121, 101, 89, 0.18);
+
+    @include _480 {
+      background: $background-color;
+    }
 
     &::after {
       content: "";
