@@ -6,21 +6,17 @@
   "scripts": {
     "copy:html": "copyfiles -u 1 ./src/*.html public",
     "copy:js": "copyfiles -u 1 ./src/scripts/*.js public",
-    "copy:images": "copyfiles -u 1 ./src/**/* public",
+    "copy:media": "copyfiles -u 1 \"./src/**/*\" public",
     "copy": "npm-run-all --parallel copy:*",
-
     "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
     "watch:js": "onchange \"src/scripts/*.js\" -- npm run copy:js",
-    "watch:images": "onchange \"src/**/*\" -- npm run copy:images",
+    "watch:media": "onchange \"src/**/*\" -- npm run copy:media",
     "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
     "watch": "npm-run-all --parallel watch:*",
-
     "build:sass": "sass  --no-source-map src/sass:public/css",
     "build": "npm-run-all copy:html build:*",
-
     "serve": "browser-sync start --server public --files public",
     "start": "npm-run-all copy --parallel watch serve",
-
     "postbuild:css": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
     "postbuild:js": "uglifyjs-folder src/scripts -eo public/scripts",
     "postbuild": "npm-run-all postbuild:css postbuild:js"

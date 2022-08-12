@@ -31,31 +31,38 @@
   &--gray {
     color: $text-color;
 
-    & .button__icon {
+    .button__icon {
       background-color: $text-color;
+    }
+  }
 
-      // transform: rotate(-90deg);
+  &--contrast {
+    .button__arrow {
+      @include _480 {
+        @include long-arrow(right, $contrast-color, small);
+      }
+
+      @include _768 {
+        @include long-arrow(right, $contrast-color, medium);
+      }
     }
   }
 
   &--top {
-    & .button__icon::after {
-      transform: rotate(-90deg);
+    .button__arrow {
+      @include long-arrow(top, $white, small);
     }
   }
 
   &--s {
-    & .button__icon {
+    .button__icon {
       @include size(28px);
-
-      &::after {
-        background-size: 15px 12px;
-      }
 
       @include _480 {
         @include size(42px);
-        &::after {
-          background-size: 20px 18px;
+
+        .button__arrow {
+          @include long-arrow(right, $white, medium);
         }
       }
 
@@ -78,7 +85,9 @@
   }
 
   &__icon {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include size(42px);
     margin-left: 15px;
 
@@ -90,24 +99,9 @@
     @include _480 {
       background: $background-color;
     }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-
-    background: center / 17px 14px no-repeat url("../images/arrow-right.svg");
-
-    @include _480 {
-      background-size: 20px 18px;
-    }
   }
+
+  &__arrow {
+    @include long-arrow(right, $white, small);
   }
 }
