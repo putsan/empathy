@@ -19,8 +19,17 @@
     width: 100%;
     margin: 24px 0 18px;
 
+    border-radius: 12px;
+
     @include _480 {
       margin-top: 0;
+    }
+
+    @include _768 {
+      max-height: 360px;
+      border-radius: 32px;
+
+      object-fit: cover;
     }
   }
 
@@ -62,6 +71,27 @@
     &--visible {
       @include text-overflow(initial, $_initial: true);
     }
+
+    h2, h3, h4, h5, h6 {
+      font-size: $desktop-font-s;
+      opacity: 0.7;
+
+      @include _480 {
+      font-size: $desktop-font-m;
+      }
+    }
+
+    ul, ol {
+      margin: 10px 0 10px 20px;
+      padding: initial;
+
+      opacity: 0.7;
+
+      li {
+        margin: initial;
+        list-style: initial;
+      }
+    }
   }
 
   &__paragraph {
@@ -71,6 +101,10 @@
 
     &:not(:last-child) {
       margin-bottom: 12px;
+    }
+
+    a {
+      color: $contrast-color;
     }
 
     @include _480 {
