@@ -14,7 +14,7 @@
     "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
     "watch": "npm-run-all --parallel watch:*",
     "build:sass": "sass  --no-source-map src/sass:public/css",
-    "build": "npm-run-all copy:html build:*",
+    "build": "npm-run-all --parallel copy:* build:*",
     "serve": "browser-sync start --server public --files public",
     "start": "npm-run-all copy --parallel watch serve",
     "postbuild:css": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
