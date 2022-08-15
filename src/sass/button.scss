@@ -36,21 +36,17 @@
     }
   }
 
-  &--contrast {
-    .button__arrow {
-      @include _480 {
-        @include long-arrow(right, $contrast-color, small);
-      }
-
-      @include _768 {
-        @include long-arrow(right, $contrast-color, medium);
+  &--contrast .button__arrow {
+    @include _480 {
+      #right-arrow\&contrast {
+        stroke: $contrast-color;
       }
     }
   }
 
   &--top {
     .button__arrow {
-      @include long-arrow(top, $white, small);
+      transform: rotate(-90deg);
     }
   }
 
@@ -62,7 +58,7 @@
         @include size(42px);
 
         .button__arrow {
-          @include long-arrow(right, $white, medium);
+          width: 24px;
         }
       }
 
@@ -87,7 +83,6 @@
   &__icon {
     display: flex;
     justify-content: center;
-    align-items: center;
     @include size(42px);
     margin-left: 15px;
 
@@ -102,6 +97,10 @@
   }
 
   &__arrow {
-    @include long-arrow(right, $white, small);
+    width: 17px;
+
+    @include _768 {
+      width: 24px;
+    }
   }
 }
