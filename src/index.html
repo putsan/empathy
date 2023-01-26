@@ -1108,13 +1108,21 @@
       <section class="contact" id="contact-form">
         <h3 class="contact__title">записатись</h3>
 
-        <form action="https://airform.io/pidgorodniy24@gmail.com" method="post" class="contact__form form">
-          <input placeholder="Імʼя" type="text" name="name" id="username" class="form__input" required>
-          <input placeholder="Email" type="email" name="Email" id="user-email" class="form__input" required>
-          <input placeholder="Моб. телефон" type="number" name="phone" id="user-phone" class="form__input" required>
+        <form action="https://airform.io/pidgorodniy24@gmail.com" method="post" name="contact-form" class="contact__form form">
+          <div class="form__underline">
+            <input placeholder="Імʼя" type="text" name="name" id="username" class="form__input" pattern="[a-z]|[A-Z]|[а-я]|[А-Я]" minlength="3" required>
+          </div>
+          <div class="form__underline">
+            <input placeholder="Email" type="email" name="Email" id="user-email" class="form__input" required>
+          </div>
+          <div class="form__underline form__underline--with-number">
+            <input placeholder="Моб. телефон" type="number" name="phone" id="user-phone" class="form__input form__input--number" required>
+          </div>
 
-          <textarea placeholder="Ваш коментар" name="comment" id="user-comment" cols="30" rows="10"
-            class="form__area"></textarea>
+          <div class="form__underline">
+            <textarea placeholder="Ваш коментар" name="comment" id="user-comment" cols="30" rows="10"
+              class="form__area"></textarea>
+          </div>
 
           <label for="agrred-with-policy" class="form__policy">
             <input type="checkbox" name="policy" id="agrred-with-policy" class="form__checkbox" required>
@@ -1145,7 +1153,7 @@
     </div>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="page-footer">
     <img src="./images/logo.png" alt="Логотип Емпатія" class="footer__logo">
 
     <p class="footer__rights">Created by
