@@ -36,5 +36,3 @@ yarn-error.log*
 # Generated files
 backstop_data
 dist
-
-public
