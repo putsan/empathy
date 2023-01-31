@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
 export const siteTitle =
@@ -9,16 +7,18 @@ export const siteTitle =
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className="">
       <Head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        {/* <link rel="icon" href="/favicon.ico" />
+
+        <link href="/fonts/mont/stylesheet.css" rel="stylesheet" type="text/css" />
+          {/* <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
         /> */}
-        {/* <meta
+          {/* <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
             siteTitle,
@@ -27,15 +27,18 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" /> */}
       </Head>
-      <header id="header" className={styles.header}>
+      <header id="header" className="">
         <nav class="navigation">
           <div class="navigation__left">
-            <img src="./images/menu.svg" class="navigation__menu-btn" alt="" />
+            <img src="/images/menu.svg" class="navigation__menu-btn" alt="" />
             <div class="navigation__line"></div>
-            <img
-              src="./images/logo.png"
+            <Image
+              priority
+              src="/images/logo.png"
+              className="navigation__logo"
+              height={36}
+              width={160}
               alt="Емпатія"
-              class="navigation__logo"
             />
           </div>
 
@@ -102,12 +105,12 @@ export default function Layout({ children, home }) {
           </>
         )} */}
       </header>
-      <main>{children}</main>
+      {/* <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
