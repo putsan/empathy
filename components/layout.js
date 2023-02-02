@@ -217,6 +217,7 @@ export default function Layout({ children, home }) {
                 href="https://goo.gl/maps/BSxatAhcwLMQgNf56"
                 class="contact__link"
                 target="_blank"
+                rel="noreferrer"
               >
                 м. Львів, вул. Бузкова 2 (корпус Б) 3-й поверх, кім. 312.
               </a>
@@ -241,6 +242,7 @@ export default function Layout({ children, home }) {
             href="https://www.behance.net/yuriytarasenko"
             class="footer__link"
             target="_blank"
+            rel="noreferrer"
           >
             Yurii Tarasenko
           </a>{" "}
@@ -249,6 +251,7 @@ export default function Layout({ children, home }) {
             href="https://cutt.ly/yp_site"
             class="footer__link"
             target="_blank"
+            rel="noreferrer"
           >
             Yuriy Putsan
           </a>
