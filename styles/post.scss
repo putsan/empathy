@@ -5,18 +5,19 @@
 .post {
   position: relative;
 
-  @include line(0, rgba(68, 68, 68, 0.4));
+  // @include line(0, rgba(68, 68, 68, 0.4));
 
   &:not(:last-child) {
     margin-bottom: 24px;
 
-    @include _480 {
-      margin-bottom: 48px;
-    }
+    // @include _480 {
+    //   margin-bottom: 48px;
+    // }
   }
 
   &__image {
     width: 100%;
+    height: auto;
     margin: 24px 0 18px;
 
     border-radius: 12px;
@@ -47,7 +48,7 @@
 
     @include _480 {
       font-size: $desktop-font-s;
-    line-height: $desktop-lh;
+      line-height: $desktop-lh;
     }
   }
 
@@ -56,8 +57,8 @@
 
     font-family: "Mont";
     font-style: normal;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 22px;
+    line-height: 28px;
     text-transform: uppercase;
 
     @include _480 {
@@ -65,36 +66,33 @@
     }
   }
 
-  &__content {
-    @include text-overflow(4);
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: $desktop-font-s;
+    opacity: 0.7;
 
-    &--visible {
-      @include text-overflow(initial, $_initial: true);
-    }
-
-    h2, h3, h4, h5, h6 {
-      font-size: $desktop-font-s;
-      opacity: 0.7;
-
-      @include _480 {
+    @include _480 {
       font-size: $desktop-font-m;
-      }
-    }
-
-    ul, ol {
-      margin: 10px 0 10px 20px;
-      padding: initial;
-
-      opacity: 0.7;
-
-      li {
-        margin: initial;
-        list-style: initial;
-      }
     }
   }
 
-  &__paragraph {
+  ul,
+  ol {
+    margin: 10px 0 10px 20px;
+    padding: initial;
+
+    opacity: 0.7;
+
+    li {
+      margin: initial;
+      list-style: initial;
+    }
+  }
+
+  p {
     line-height: $mob-line-height;
 
     opacity: 0.7;
@@ -119,7 +117,7 @@
     font-weight: 700;
 
     @include _480 {
-      position: absolute;
+      // position: absolute;
       bottom: calc(42px + (var(--button-size) / 2));
       flex-wrap: wrap;
 
@@ -159,7 +157,7 @@
 
     @include _480 {
       &:first-child::after {
-        content: '/';
+        content: "/";
         margin-left: 4px;
       }
     }

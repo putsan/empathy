@@ -1,7 +1,8 @@
-import Layout from '../../components/layout';
-import Head from 'next/head';
-import Date from '../../components/date';
-import { getAllPostIds, getPostData } from '../../lib/posts';
+import Layout from "../../components/layout";
+import Head from "next/head";
+import Date from "../../components/date";
+import { getAllPostIds, getPostData } from "../../lib/posts";
+import Image from "next/image";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -21,19 +22,43 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
+  const { title, id, date, contentHtml, img } = postData;
+
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>{title}</title>
       </Head>
 
-      {postData.title}
-      <br />
-      {postData.id}
-      <br />
-      <Date dateString={postData.date} />
-      <br />
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <section className="row">
+        <Image
+          src={img}
+          className="post__image"
+          width={335}
+          height={170}
+          alt=""
+        />
+
+        <Date dateString={date} className="post__date" />
+        <h1 className="post__title">{title}</h1>
+        <article
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+          className="post"
+        />
+
+        <div class="post__footer">
+          <p class="post__author">Підгородний Павло Михайлович</p>
+          <p class="post__contacts">
+            Тел.{" "}
+            <a class="post__phone" href="tel:+380632404508">
+              0632404508
+            </a>
+            <a class="post__phone" href="tel:+380679802165">
+              0679802165
+            </a>
+          </p>
+        </div>
+      </section>
     </Layout>
   );
 }
