@@ -54,8 +54,8 @@ export default function Home({ allPostsData }) {
                   <g
                     id="right-arrow&contrast"
                     stroke="#F8F9F8"
-                    stroke-width="6"
-                    stroke-linecap="round"
+                    strokeWidth="6"
+                    strokeLinecap="round"
                   >
                     <line x1="5" y1="50" x2="95" y2="50" />
                     <line x1="58" y1="13" x2="95" y2="50" />

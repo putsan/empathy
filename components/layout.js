@@ -141,7 +141,7 @@ export default function Layout({ children, home }) {
                 id="username"
                 className="form__input"
                 pattern="[a-z]|[A-Z]|[а-я]|[А-Я]"
-                minlength="3"
+                minLength="3"
                 required
               />
             </div>
@@ -177,7 +177,7 @@ export default function Layout({ children, home }) {
               ></textarea>
             </div>
 
-            <label for="agrred-with-policy" className="form__policy">
+            <label htmlFor="agrred-with-policy" className="form__policy">
               <input
                 type="checkbox"
                 name="policy"
