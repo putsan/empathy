@@ -46,14 +46,14 @@ export default function Post({ postData }) {
           className="post"
         />
 
-        <div class="post__footer">
-          <p class="post__author">Підгородний Павло Михайлович</p>
-          <p class="post__contacts">
+        <div className="post__footer">
+          <p className="post__author">Підгородний Павло Михайлович</p>
+          <p className="post__contacts">
             Тел.{" "}
-            <a class="post__phone" href="tel:+380632404508">
+            <a className="post__phone" href="tel:+380632404508">
               0632404508
             </a>
-            <a class="post__phone" href="tel:+380679802165">
+            <a className="post__phone" href="tel:+380679802165">
               0679802165
             </a>
           </p>

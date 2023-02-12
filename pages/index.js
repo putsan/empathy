@@ -22,8 +22,8 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
 
-      <div class="intro">
-        <div class="intro__container">
+      <div className="intro">
+        <div className="intro__container">
           <Image
             priority
             src="/images/poster-d.jpg"
@@ -35,19 +35,19 @@ export default function Home({ allPostsData }) {
           />
         </div>
 
-        <div class="intro__poster-content">
-          <p class="intro__pre-title">Психолог Підгородний</p>
-          <h1 class="intro__page-title section-title">
+        <div className="intro__poster-content">
+          <p className="intro__pre-title">Психолог Підгородний</p>
+          <h1 className="intro__page-title section-title">
             Консультація психолога у Львові
           </h1>
-          <p class="intro__sub-title">Завжди в житті з довірою.</p>
+          <p className="intro__sub-title">Завжди в житті з довірою.</p>
 
-          <button class="button button--contrast">
-            <a href="#contact-form" class="button__link">
-              <span class="button__text">Записатись</span>
-              <div class="button__icon">
+          <button className="button button--contrast">
+            <a href="#contact-form" className="button__link">
+              <span className="button__text">Записатись</span>
+              <div className="button__icon">
                 <svg
-                  class="button__arrow"
+                  className="button__arrow"
                   viewBox="0 0 100 100"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -67,70 +67,70 @@ export default function Home({ allPostsData }) {
           </button>
         </div>
 
-        <div class="experience">
-          <div class="experience__ellipse"></div>
+        <div className="experience">
+          <div className="experience__ellipse"></div>
 
-          <ul class="experience__list">
-            <li class="experience__item">
-              <span class="experience__number">10*</span>{" "}
-              <span class="experience__label">Років досвіду</span>
+          <ul className="experience__list">
+            <li className="experience__item">
+              <span className="experience__number">10*</span>{" "}
+              <span className="experience__label">Років досвіду</span>
             </li>
 
-            <li class="experience__item">
-              <span class="experience__number">250+</span>{" "}
-              <span class="experience__label">Задоволених клієнтів</span>
+            <li className="experience__item">
+              <span className="experience__number">250+</span>{" "}
+              <span className="experience__label">Задоволених клієнтів</span>
             </li>
 
-            <li class="experience__item">
-              <span class="experience__number">6*</span>{" "}
-              <span class="experience__label">Проведено коучингів</span>
+            <li className="experience__item">
+              <span className="experience__number">6*</span>{" "}
+              <span className="experience__label">Проведено коучингів</span>
             </li>
 
-            <li class="experience__item">
-              <span class="experience__number">6 років</span>{" "}
-              <span class="experience__label">Акредитації в Україні</span>
+            <li className="experience__item">
+              <span className="experience__number">6 років</span>{" "}
+              <span className="experience__label">Акредитації в Україні</span>
             </li>
           </ul>
         </div>
       </div>
 
       <main>
-        <section class="row" id="services">
-          <h2 class="section-title row__title">Послуги</h2>
+        <section className="row" id="services">
+          <h2 className="section-title row__title">Послуги</h2>
 
-          <ol class="num-list">
-            <li class="num-list__item">
-              <p class="num-list__text">
+          <ol className="num-list">
+            <li className="num-list__item">
+              <p className="num-list__text">
                 Консультування та провідна діяльність із психологічної адаптації
                 дітей та підлітків;
               </p>
             </li>
-            <li class="num-list__item">
-              <p class="num-list__text">
+            <li className="num-list__item">
+              <p className="num-list__text">
                 Консультування і діяльність із запобігання жорстокого поводження
                 з дітьми та іншими особами;
               </p>
             </li>
-            <li class="num-list__item">
-              <p class="num-list__text">
+            <li className="num-list__item">
+              <p className="num-list__text">
                 Консультування сімейного психолога з питань шлюбу і сім’ї,
                 регулювання відносин між чоловіком та жінкою;
               </p>
             </li>
-            <li class="num-list__item">
-              <p class="num-list__text">
+            <li className="num-list__item">
+              <p className="num-list__text">
                 Психологічна підтримка та допомога жертвам стихійних лих,
                 іммігрантам, а також тим хто потрапив у складне становище;
               </p>
             </li>
-            <li class="num-list__item">
-              <p class="num-list__text">
+            <li className="num-list__item">
+              <p className="num-list__text">
                 Психологічна підтримка та допомога жертвам стихійних лих,
                 іммігрантам, а також тим хто потрапив у складне становище;
               </p>
             </li>
-            <li class="num-list__item">
-              <p class="num-list__text">
+            <li className="num-list__item">
+              <p className="num-list__text">
                 Професійна реабілітація або підготовка до певного виду
                 діяльності безробітних, а також хто не може себе реалізувати по
                 професії;
@@ -139,10 +139,10 @@ export default function Home({ allPostsData }) {
           </ol>
         </section>
 
-        <section class="row" id="about">
-          <h2 class="section-title row__title">Про мене</h2>
+        <section className="row" id="about">
+          <h2 className="section-title row__title">Про мене</h2>
 
-          <div class="about">
+          <div className="about">
             <Image
               src="/images/mind.svg"
               className="about__image"
@@ -151,31 +151,31 @@ export default function Home({ allPostsData }) {
               alt="Зображення силуету голови людини з мозком у ній"
             />
 
-            <div class="about__text">
-              <p class="about__paragraph">
+            <div className="about__text">
+              <p className="about__paragraph">
                 Закінчив Дрогобицький державний педагогічний університет імені
                 Івана Франка і отримав вищу освіту за спеціальністю{" "}
-                <span class="about__accent">
+                <span className="about__accent">
                   «Практична психологія. Соціальна педагогіка»
                 </span>{" "}
                 та здобув кваліфікацію практичного психолога у закладах освіти,
                 соціального педагога.
               </p>
 
-              <p class="about__paragraph">
+              <p className="about__paragraph">
                 Порив у навчанні допоміг навчати та виховувати особистість за
                 видами педагогіки: за народною педагогікою; світською та
                 духовною. Найбільші досягнення у вивчення психіки людини
                 принесло для мене успіх та щастя, а також прийшлось вивчати
                 різновиди субкультур і відхилення від норми, що називається{" "}
-                <span class="about__accent">«девіантною поведінкою»</span>, моя
+                <span className="about__accent">«девіантною поведінкою»</span>, моя
                 дипломна робота.
               </p>
 
-              <p class="about__paragraph">
+              <p className="about__paragraph">
                 У 2013 році повищив свою кваліфікацію, закінчив Національний
                 університет{" "}
-                <span class="about__accent">«Львівська політехніка»</span> і
+                <span className="about__accent">«Львівська політехніка»</span> і
                 отримав повну вищу освіту за спеціальністю «Управління
                 навчальним закладом» та здобув кваліфікацію магістра з
                 управління навчальним закладом. З 2013року займаюсь приватним
@@ -185,60 +185,66 @@ export default function Home({ allPostsData }) {
           </div>
         </section>
 
-        <section class="row" id="prices">
-          <h2 class="section-title row__title">ціни</h2>
+        <section className="row" id="prices">
+          <h2 className="section-title row__title">ціни</h2>
 
-          <ol class="price">
-            <li class="price__item">
-              <p class="price__label">
+          <ol className="price">
+            <li className="price__item">
+              <p className="price__label">
                 Індивідуальна консультація психолога або соціального педагога
               </p>
-              <p class="price__value">
-                600 грн. <span class="price__time">/ 1 год.</span>
+              <p className="price__value">
+                600 грн. <span className="price__time">/ 1 год.</span>
               </p>
             </li>
-            <li class="price__item">
-              <p class="price__label">
+            <li className="price__item">
+              <p className="price__label">
                 Навчально виховна робота з дітьми дошкільного віку
               </p>
-              <p class="price__value">
-                600 грн. <span class="price__time">/ 1 год.</span>
+              <p className="price__value">
+                600 грн. <span className="price__time">/ 1 год.</span>
               </p>
             </li>
-            <li class="price__item">
-              <p class="price__label">
+            <li className="price__item">
+              <p className="price__label">
                 Консультування в процесі професійної реабілітації
               </p>
-              <p class="price__value">
-                600 грн. <span class="price__time">/ 1 год.</span>
+              <p className="price__value">
+                600 грн. <span className="price__time">/ 1 год.</span>
               </p>
             </li>
-            <li class="price__item">
-              <p class="price__label">
+            <li className="price__item">
+              <p className="price__label">
                 Консультування з питань шлюбу і сім’ї, сімейне консультування
               </p>
-              <p class="price__value">
-                900 грн. <span class="price__time">/ 1 год.</span>
+              <p className="price__value">
+                900 грн. <span className="price__time">/ 1 год.</span>
               </p>
             </li>
-            <li class="price__item">
-              <p class="price__label">
+            <li className="price__item">
+              <p className="price__label">
                 Консультація та профілактика в процесі позбавлення шкідливих
                 звичок, психологічна підтримка жертвам стихійних лих
               </p>
-              <p class="price__value">
-                600 грн. <span class="price__time">/ 1 год.</span>
+              <p className="price__value">
+                600 грн. <span className="price__time">/ 1 год.</span>
               </p>
             </li>
-            <li class="price__item">
-              <p class="price__label">
+            <li className="price__item">
+              <p className="price__label">
                 Консультування із соціальної адаптації дітей і підлітків
               </p>
-              <p class="price__value">
-                600 грн. <span class="price__time">/ 1 год.</span>
+              <p className="price__value">
+                600 грн. <span className="price__time">/ 1 год.</span>
               </p>
             </li>
           </ol>
+        </section>
+
+        <section className="row" id="posts">
+          <h2 className="section-title row__title">Статті</h2>
+
+          Далі перелік статтей у моєму дизайні тут має бути
         </section>
 
         <section className="">
