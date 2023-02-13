@@ -168,8 +168,8 @@ export default function Home({ allPostsData }) {
                 духовною. Найбільші досягнення у вивчення психіки людини
                 принесло для мене успіх та щастя, а також прийшлось вивчати
                 різновиди субкультур і відхилення від норми, що називається{" "}
-                <span className="about__accent">«девіантною поведінкою»</span>, моя
-                дипломна робота.
+                <span className="about__accent">«девіантною поведінкою»</span>,
+                моя дипломна робота.
               </p>
 
               <p className="about__paragraph">
@@ -244,19 +244,24 @@ export default function Home({ allPostsData }) {
         <section className="row" id="posts">
           <h2 className="section-title row__title">Статті</h2>
 
-          Далі перелік статтей у моєму дизайні тут має бути
-        </section>
+          <ul>
+            {allPostsData.map(({ id, date, title, img, excerpt }) => (
+              <li className="post" key={id}>
+                <Image
+                  src={img}
+                  className="post__image"
+                  width={335}
+                  height={170}
+                  alt=""
+                />
+                <Date dateString={date} className="post__date" />
+                <Link href={`/posts/${id}`}>
+                  <h4 className="post__title">{title}</h4>
+                </Link>
 
-        <section className="">
-          <h2 className="">Blog</h2>
-          <ul className="">
-            {allPostsData.map(({ id, date, title }) => (
-              <li className="" key={id}>
-                <Link href={`/posts/${id}`}>{title}</Link>
-                <br />
-                <small className=''>
-                  <Date dateString={date} />
-                </small>
+                <main class="post__content ">
+                  <p class="post__paragraph">{excerpt}</p>
+                </main>
               </li>
             ))}
           </ul>
