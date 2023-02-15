@@ -259,8 +259,8 @@ export default function Home({ allPostsData }) {
                   <h4 className="post__title">{title}</h4>
                 </Link>
 
-                <main class="post__content ">
-                  <p class="post__paragraph">{excerpt}</p>
+                <main className="post__content ">
+                  <p className="post__paragraph">{excerpt}</p>
                 </main>
               </li>
             ))}
