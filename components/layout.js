@@ -43,37 +43,55 @@ export default function Layout({ children, home }) {
               alt=""
             />
             <div className="navigation__line"></div>
-            <Image
-              priority
-              src="/images/logo.png"
-              className="navigation__logo"
-              height={36}
-              width={160}
-              alt="Емпатія"
-            />
+            <Link href="/">
+              <Image
+                priority
+                src="/images/logo.png"
+                className="navigation__logo"
+                height={36}
+                width={160}
+                alt="Емпатія"
+              />
+            </Link>
           </div>
 
           <div className="navigation__menu">
             <ul className="navigation__list">
               <li className="navigation__item">
-                <a href="#services" className="navigation__link">
+                <Link
+                  href="/#services"
+                  className="navigation__link"
+                  scroll={false}
+                >
                   Послуги
-                </a>
+                </Link>
               </li>
               <li className="navigation__item">
-                <a href="#about" className="navigation__link">
+                <Link
+                  href="/#about"
+                  className="navigation__link"
+                  scroll={false}
+                >
                   Про мене
-                </a>
+                </Link>
               </li>
               <li className="navigation__item">
-                <a href="#prices" className="navigation__link">
+                <Link
+                  href="/#prices"
+                  className="navigation__link"
+                  scroll={false}
+                >
                   Ціни
-                </a>
+                </Link>
               </li>
               <li className="navigation__item">
-                <a href="#posts" className="navigation__link">
+                <Link
+                  href="/#posts"
+                  className="navigation__link"
+                  scroll={false}
+                >
                   Статті
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
