@@ -1,5 +1,5 @@
-$num-l-gap-h: 20px;
-$num-l-gap-v: 32px;
+$num-list-gap-h: 20px;
+$num-list-gap-v: 32px;
 
 .num-list {
   counter-reset: list;
@@ -11,11 +11,11 @@ $num-l-gap-v: 32px;
   }
 
   @include _768(978px) {
-    @include flexGap($num-l-gap-h, net, li, $num-l-gap-v, 2);
+    @include flexGap($num-list-gap-h, net, li, $num-list-gap-v, 2);
   }
 
   @include _980 {
-    @include flexGap($num-l-gap-h, net, li, $num-l-gap-v, 3);
+    @include flexGap($num-list-gap-h, net, li, $num-list-gap-v, 3);
   }
 
   &__item {
@@ -27,14 +27,14 @@ $num-l-gap-v: 32px;
     );
 
     @include _768 {
-      width: calc(50% - $num-l-gap-h);
+      width: calc(50% - $num-list-gap-h);
       max-width: 387px;
       margin: 0;
       padding-left: calc(var(--mark-size) + var(--list-horizontal-space));
     }
 
     @include _980 {
-      width: calc(33.33% - $num-l-gap-h);
+      width: calc(33.33% - $num-list-gap-h);
     }
 
     &::before {
