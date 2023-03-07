@@ -248,7 +248,7 @@ export default function Layout({ children, home }) {
         />
 
         <p className="footer__rights">
-          Created by
+          Created by{" "}
           <a
             href="https://www.behance.net/yuriytarasenko"
             className="footer__link"
@@ -265,7 +265,7 @@ export default function Layout({ children, home }) {
             rel="noreferrer"
           >
             Yuriy Putsan
-          </a>
+          </a>{" "}
           All rights reserved.
         </p>
       </footer>
