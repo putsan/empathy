@@ -5,14 +5,12 @@
 .post {
   position: relative;
 
-  // @include line(0, rgba(68, 68, 68, 0.4));
-
   &:not(:last-child) {
     margin-bottom: 24px;
 
-    // @include _480 {
-    //   margin-bottom: 48px;
-    // }
+    @include _480 {
+      margin-bottom: 48px;
+    }
   }
 
   &__image {
@@ -97,7 +95,7 @@
 
     opacity: 0.7;
 
-    &:not(:last-child) {
+    &:not(:last-child):not(.posts-list__author) {
       margin-bottom: 12px;
     }
 
@@ -112,63 +110,44 @@
 
   &__footer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 24px;
 
     font-weight: 700;
 
     @include _480 {
-      // position: absolute;
+      flex-direction: row;
+      justify-content: space-between;
       bottom: calc(42px + (var(--button-size) / 2));
-      flex-wrap: wrap;
 
       font-weight: 600;
-
-      transform: translateY(50%);
-    }
-
-    @include _480(767px) {
-      display: block;
     }
   }
 
-  &__author {
-    margin-right: 42px;
+  &__footer-left {
+    display: flex;
+    flex-wrap: wrap;
 
-    @include _max(767px) {
-      width: 100%;
-    }
+    margin-bottom: 32px;
 
-    @include _980 {
-      width: initial;
-    }
-  }
-
-  &__contacts {
-    min-width: 100px;
-    text-align: right;
+    text-align: center;
 
     @include _480 {
+      margin-bottom: 0;
       text-align: left;
     }
   }
 
+  &__contacts,
+  &__author {
+    width: 100%;
+  }
+
   &__phone {
     color: inherit;
-
-    @include _480 {
-      &:first-child::after {
-        content: "/";
-        margin-left: 4px;
-      }
-    }
   }
 
   &__button {
-    display: block;
-    margin: 32px auto 24px;
-
-    @include _480 {
-      margin: 42px 0 42px auto;
-    }
   }
 }

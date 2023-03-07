@@ -1,0 +1,96 @@
+// $post-list-gap-h: 10px;
+// $post-list-gap-v: 16px;
+
+.posts-list {
+
+  &__item {
+    @include line(0, rgba(68, 68, 68, 0.4));
+  }
+
+  &__footer {
+    display: none;
+    margin-top: 24px;
+
+    font-weight: 700;
+
+    @include _480 {
+      display: flex;
+      position: absolute;
+      bottom: calc(38px + (var(--button-size) / 2));
+      flex-wrap: wrap;
+
+      font-weight: 600;
+
+      transform: translateY(50%);
+    }
+
+    @include _480(767px) {
+      display: block;
+    }
+
+    p {
+      opacity: 1 !important;
+
+      a {
+        color: inherit !important;
+      }
+    }
+  }
+
+  &__author {
+    margin-right: 42px;
+
+    @include _max(767px) {
+      width: 100%;
+    }
+
+    @include _980 {
+      width: initial;
+    }
+  }
+
+  &__contacts {
+    min-width: 100px;
+    text-align: right;
+
+    @include _480 {
+      text-align: left;
+    }
+  }
+
+  &__phone {
+    color: inherit;
+
+    @include _480 {
+      &:first-child::after {
+        content: "/";
+        margin-left: 4px;
+      }
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 32px auto 24px;
+
+    @include _480 {
+      margin: 42px 0 42px auto;
+    }
+  }
+
+  // ЦЕ Я ПРОБУВАВ СІТКУ РОБИТИ, АЛЕ ПОКИ ВІДКЛАДУ ЦЕ
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+
+  // @include _768 {
+  //   @include flexGap($post-list-gap-h, net, li, $post-list-gap-v, 2);
+  // }
+
+  // &__item {
+
+  //   @include _768 {
+  //     width: calc(50% - $post-list-gap-h);
+  //   }
+  // }
+}

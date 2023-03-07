@@ -172,7 +172,11 @@
   }
 }
 
-
+@mixin position($vertical, $horizontal, $type: absolute) {
+  position: $type;
+  top: $vertical;
+  left: $horizontal;
+}
 
 /* End of Used Mixins
 -------------------------------------------------- */
@@ -200,11 +204,7 @@
   text-transform: uppercase;
 }
 
-@mixin position($vertical, $horisontal, $type: absolute) {
-  position: $type;
-  top: $vertical;
-  left: $horisontal;
-}
+
 
 @mixin button-font($_size, $_color: $white) {
   font-family: inherit;

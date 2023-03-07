@@ -244,9 +244,9 @@ export default function Home({ allPostsData }) {
         <section className="row" id="posts">
           <h2 className="section-title row__title">Статті</h2>
 
-          <ul>
+          <ul className="posts-list">
             {allPostsData.map(({ id, date, title, img, excerpt }) => (
-              <li className="post" key={id}>
+              <li className="post posts-list__item" key={id}>
                 <Image
                   src={img}
                   className="post__image"
@@ -261,9 +261,18 @@ export default function Home({ allPostsData }) {
 
                 <main className="post__content ">
                   <p className="post__paragraph">{excerpt}</p>
+
+                  <div class="posts-list__footer">
+                    <p class="posts-list__author">Підгородний Павло Михайлович</p>
+                    <p class="posts-list__contacts">
+                      Тел.
+                      <a class="posts-list__phone" href="tel:+380632404508">0632404508</a>
+                      <a class="posts-list__phone" href="tel:+380679802165">0679802165</a>
+                    </p>
+                  </div>
                 </main>
 
-                <button class="post__button button button--gray button--s">
+                <button class="posts-list__button button button--gray button--s">
                   <Link href={`/posts/${id}`} className="button__link">
                     <span class="button__text">Читати далі</span>
                     <div class="button__icon">
