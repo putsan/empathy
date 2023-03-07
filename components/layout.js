@@ -1,13 +1,41 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
+import { toggleBurgerMenu, isItMobileOrTablet } from "../scripts/index";
 
 export const siteTitle =
   "Ваш психолог у Львові: консультації, тренінги, коучинг ❘ Підгородний";
 
 export default function Layout({ children, home }) {
+  useEffect(() => {
+    toggleBurgerMenu();
+
+    const DISPLAY_NONE_CLASS_NAME = "pinned__link--none";
+    const callBtn = document.querySelector("#fast-call-btn");
+    if (!isItMobileOrTablet()) {
+      callBtn.classList.toggle(DISPLAY_NONE_CLASS_NAME);
+    }
+
+    const goToTopBtn = document.getElementById("goToTopBtn");
+    const rootElement = document.documentElement;
+    const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+    function handleScroll() {
+      if (rootElement.scrollTop / scrollTotal < 0.07) {
+        goToTopBtn.classList.add(DISPLAY_NONE_CLASS_NAME);
+      } else {
+        goToTopBtn.classList.remove(DISPLAY_NONE_CLASS_NAME);
+      }
+    }
+    document.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    }
+  });
+
   return (
-    <div className="">
+    <div>
       <Head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -102,44 +130,9 @@ export default function Layout({ children, home }) {
             </a>
           </button>
         </nav>
-        {/* {home ? (
-          <>
-            <Image
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <Image
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
-          </>
-        )} */}
       </header>
 
       <main>{children}</main>
-
-      {/* {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
-        </div>
-      )} */}
 
       <div className="contact__background">
         <section className="contact" id="contact-form">
@@ -276,6 +269,36 @@ export default function Layout({ children, home }) {
           All rights reserved.
         </p>
       </footer>
+
+      <div className="pinned">
+        <a
+          className="pinned__link pinned__link--none"
+          id="goToTopBtn"
+          href="#header"
+        >
+          <Image
+            src="/images/to-top.svg"
+            className="pinned__ico"
+            height={48}
+            width={48}
+            alt="Go to top"
+          />
+        </a>
+
+        <a
+          className="pinned__link"
+          id="fast-call-btn"
+          href="tel:+38067-980-21-65"
+        >
+          <Image
+            src="/images/phone.svg"
+            className="pinned__ico"
+            height={48}
+            width={48}
+            alt="Call"
+          />
+        </a>
+      </div>
     </div>
   );
 }
