@@ -262,6 +262,21 @@ export default function Home({ allPostsData }) {
                 <main className="post__content ">
                   <p className="post__paragraph">{excerpt}</p>
                 </main>
+
+                <button class="post__button button button--gray button--s">
+                  <Link href={`/posts/${id}`} className="button__link">
+                    <span class="button__text">Читати далі</span>
+                    <div class="button__icon">
+                      <svg class="button__arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <g id="right-arrow" stroke="#F8F9F8" stroke-width="6" stroke-linecap="round">
+                          <line x1="5" y1="50" x2="95" y2="50"></line>
+                          <line x1="58" y1="13" x2="95" y2="50"></line>
+                          <line x1="58" y1="87" x2="95" y2="50"></line>
+                        </g>
+                      </svg>
+                    </div>
+                  </Link>
+                </button>
               </li>
             ))}
           </ul>
