@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
-  const { title, id, date, contentHtml, img } = postData;
+  const { title, date, postContentHtml, img } = postData;
 
   return (
     <Layout>
@@ -43,7 +43,7 @@ export default function Post({ postData }) {
         <Date dateString={date} className="post__date" />
         <h1 className="post__title">{title}</h1>
         <article
-          dangerouslySetInnerHTML={{ __html: contentHtml }}
+          dangerouslySetInnerHTML={{ __html: postContentHtml }}
           className="post"
         />
 

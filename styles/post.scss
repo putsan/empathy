@@ -64,6 +64,10 @@
     }
   }
 
+  &__content {
+    @include text-overflow(4);
+  }
+
   h2,
   h3,
   h4,

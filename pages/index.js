@@ -6,7 +6,8 @@ import Date from "../components/date";
 import { getSortedPostsData } from "../lib/posts";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
+
   return {
     props: {
       allPostsData,
@@ -260,7 +261,7 @@ export default function Home({ allPostsData }) {
                 </Link>
 
                 <main className="post__content ">
-                  <p className="post__paragraph">{excerpt}</p>
+                  <div dangerouslySetInnerHTML={{ __html: excerpt }} />
 
                   <div class="posts-list__footer">
                     <p class="posts-list__author">Підгородний Павло Михайлович</p>
