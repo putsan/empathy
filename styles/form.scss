@@ -1,0 +1,100 @@
+.form {
+  &__input {
+    @include input-style($_padding: 0 8px);
+
+    &--number {
+      &:not(:placeholder-shown) {
+        padding-left: 55px;
+
+        // & .form__underline--with-number::before {
+        //   display: initial;
+        // }
+      }
+    }
+  }
+
+  &__area {
+    @include input-style(87px, 8px);
+    resize: none;
+  }
+
+  &__underline {
+    position: relative;
+    margin-bottom: 18px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: $background-color;
+    }
+
+    &:focus-within::after {
+      height: 2px;
+    }
+
+    &--with-number {
+      &::before {
+        content: "+380";
+        display: none;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+
+        font-size: 14px;
+        line-height: 24px;
+
+        opacity: 0.7;
+      }
+
+      &:focus-within {
+        &::before {
+          display: initial;
+        }
+
+        & input {
+          padding-left: 55px;
+
+          &::placeholder {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__checkbox {
+    // background: none;
+    // border: 1.5px solid #F8F9F8;
+    // border-radius: 5px;
+  }
+
+  &__policy-text {
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 24px;
+
+    font-size: 10px;
+    line-height: 13px;
+    font-weight: 500;
+
+    opacity: 0.7;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 10px 12px;
+
+    font-family: "Mont";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: $contrast-color;
+
+    background: $background-color;
+    border-radius: 34px;
+  }
+}

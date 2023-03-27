@@ -1,0 +1,157 @@
+#posts {
+  margin-bottom: 90px;
+}
+
+.post {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+
+    @include _480 {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    margin: 24px 0 18px;
+
+    border-radius: 12px;
+
+    @include _480 {
+      margin-top: 0;
+    }
+
+    @include _768 {
+      max-height: 360px;
+      border-radius: 32px;
+
+      object-fit: cover;
+    }
+  }
+
+  &__date {
+    display: block;
+
+    font-family: "Mont";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $mob-font-size;
+    line-height: $mob-line-height;
+    color: $contrast-color;
+
+    opacity: 0.7;
+
+    @include _480 {
+      font-size: $desktop-font-s;
+      line-height: $desktop-lh;
+    }
+  }
+
+  &__title {
+    margin: 6px 0 24px;
+
+    font-family: "Mont";
+    font-style: normal;
+    font-size: 22px;
+    line-height: 28px;
+    text-transform: uppercase;
+
+    @include _480 {
+      margin: 12px 0 14px;
+    }
+  }
+
+  &__content {
+    @include text-overflow(4);
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: $desktop-font-s;
+    opacity: 0.7;
+
+    @include _480 {
+      font-size: $desktop-font-m;
+    }
+  }
+
+  ul,
+  ol {
+    margin: 10px 0 10px 20px;
+    padding: initial;
+
+    opacity: 0.7;
+
+    li {
+      margin: initial;
+      list-style: initial;
+    }
+  }
+
+  p {
+    line-height: $mob-line-height;
+
+    opacity: 0.7;
+
+    &:not(:last-child):not(.posts-list__author) {
+      margin-bottom: 12px;
+    }
+
+    a {
+      color: $contrast-color;
+    }
+
+    @include _480 {
+      line-height: $desktop-lh;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+
+    font-weight: 700;
+
+    @include _480 {
+      flex-direction: row;
+      justify-content: space-between;
+      bottom: calc(42px + (var(--button-size) / 2));
+
+      font-weight: 600;
+    }
+  }
+
+  &__footer-left {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 32px;
+
+    text-align: center;
+
+    @include _480 {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+
+  &__contacts,
+  &__author {
+    width: 100%;
+  }
+
+  &__phone {
+    color: inherit;
+  }
+
+  &__button {
+  }
+}

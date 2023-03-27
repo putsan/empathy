@@ -1,0 +1,67 @@
+$num-list-gap-h: 20px;
+$num-list-gap-v: 32px;
+
+.num-list {
+  counter-reset: list;
+
+  @include _768 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include _768(978px) {
+    @include flexGap($num-list-gap-h, net, li, $num-list-gap-v, 2);
+  }
+
+  @include _980 {
+    @include flexGap($num-list-gap-h, net, li, $num-list-gap-v, 3);
+  }
+
+  &__item {
+    position: relative;
+    padding: 22px var(--mob-l-item-padding-horizontal);
+    padding-left: calc(
+      var(--mark-size) + var(--list-horizontal-space) +
+        var(--mob-l-item-padding-horizontal)
+    );
+
+    @include _768 {
+      width: calc(50% - $num-list-gap-h);
+      max-width: 387px;
+      margin: 0;
+      padding-left: calc(var(--mark-size) + var(--list-horizontal-space));
+    }
+
+    @include _980 {
+      width: calc(33.33% - $num-list-gap-h);
+    }
+
+    &::before {
+      counter-increment: list;
+      content: counter(list);
+
+      position: absolute;
+      left: var(--mob-l-item-padding-horizontal);
+      @include size(var(--mark-size));
+      @include flex-centering($_justify: center);
+
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      color: $contrast-color;
+      border: solid 2px $contrast-color;
+      border-radius: 50%;
+
+      box-sizing: border-box;
+
+      @include _768 {
+        left: 0;
+      }
+    }
+  }
+
+  &__text {
+    opacity: 0.7;
+  }
+}

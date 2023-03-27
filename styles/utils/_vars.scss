@@ -1,0 +1,125 @@
+@import "./media-mixin";
+
+/*=============================================
+=                   Colors                   =
+=============================================*/
+$contrast-color: #3963bc;
+$background-color: #f8f9f8;
+$dark-grey: #8d7474;
+$lite-blue: #aec0e3;
+$text-color: #444;
+$gray: #7c7c7c;
+$white: #fff;
+
+/*=============================================
+=                   Sizes                   =
+=============================================*/
+
+/* Fonts
+-------------------------------------------------- */
+$mob-font-size: 12px;
+$mob-line-height: 18px;
+
+$desktop-font-s: 14px;
+$desktop-font-m: 16px;
+$desktop-lh: 24px;
+
+/* Elements
+-------------------------------------------------- */
+:root {
+  --nav-height: 62px;
+  --logo-h-header: 18.5px;
+  // --logo-h-footer: 36px;
+  --mark-size: 28px;
+  --button-size: 42px;
+}
+
+@include _480 {
+  :root {
+    // --button-size: 68px;
+  }
+}
+
+@include _768 {
+  :root {
+    --nav-height: 92px;
+    --logo-h-header: 36px;
+    --mark-size: 42px;
+    --button-size: 68px;
+  }
+}
+
+/* Spaces
+-------------------------------------------------- */
+:root {
+  --vertical-space: 20px;
+  --horizontal-space: 48px;
+  --row-title-mb: 32px;
+  --list-horizontal-space: 14px;
+  --mob-l-item-padding-horizontal: 16px;
+}
+
+@include _768 {
+  :root {
+    --vertical-space: 60px;
+    --horizontal-space: 78px;
+    --row-title-mb: 48px;
+    --list-horizontal-space: 18px;
+  }
+}
+
+@include _1170 {
+  :root {
+    --vertical-space: 120px;
+    --horizontal-space: 120px;
+  }
+}
+/*============  End of Sizes  =============*/
+
+// ++ Z INDEXSSSSS
+
+$white: #fff;
+$gradient-start: #191536;
+$gradient-end: #000;
+$header-gradient: linear-gradient(
+  107.56deg,
+  $gradient-start 0%,
+  $gradient-end 100%
+);
+
+$nav-mobile-hower: #110e25;
+//
+$slider-round: #484848;
+$slider-round-active: #ababab;
+$tech-img-round: #0e0c1e;
+
+$page-font-size: 16px;
+$page-line-height: 150%;
+//
+$header-title: 46px;
+$header-line: 130%;
+$header-title-moile: 26px;
+//
+$footer-font-size-mob: 13px;
+//
+$title-size: 36px;
+$title-line: 46px;
+$title-size-mobile: 21px;
+$title-line-mobile: 130%;
+//
+$subtitle-size: 14px;
+$subtitle-line: 18px;
+$subtitle-size-mobile: 12px;
+//
+$card-title-size: 18px;
+$card-title-line: 23px;
+//
+$button-font-size-mobile: 14px;
+$art-text-size: 64px;
+
+$contrast-btn-height-mob: 40px;
+$tech-img-size-mobile: 197px;
+$tech-img-size: 295px;
+$slider-round-size: 4px;
+
+$main-hover-duration: 0.5s;

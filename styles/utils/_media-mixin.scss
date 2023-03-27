@@ -1,0 +1,50 @@
+// Using
+//.div {
+//   @include _1170 {
+//       @content;
+//   }
+//}
+$max-screen-width: 100vw;
+
+@mixin _1170 ($_max-width: $max-screen-width) {
+  @media (min-width: 1170px) and (max-width: $_max-width) {
+      @content;
+  }
+}
+@mixin _980 ($_max-width: $max-screen-width) {
+  @media (min-width: 980px) and (max-width: $_max-width) {
+      @content;
+  }
+}
+@mixin _768 ($_max-width: $max-screen-width) {
+  @media (min-width: 768px) and (max-width: $_max-width){
+      @content;
+  }
+}
+@mixin _600 ($_max-width: $max-screen-width) {
+  @media (min-width: 600px) and (max-width: $_max-width) {
+      @content;
+  }
+}
+@mixin _480 ($_max-width: $max-screen-width) {
+  @media (min-width: 480px) and (max-width: $_max-width) {
+      @content;
+  }
+}
+@mixin _320($_max-width: $max-screen-width) {
+  @media (min-width: 320px) and (max-width: $_max-width) {
+      @content;
+  }
+}
+
+@mixin _max($_max-width) {
+  @media (max-width: $_max-width) {
+      @content;
+  }
+}
+
+@mixin _min($_min-width) {
+  @media (min-width: $_min-width) {
+      @content;
+  }
+}

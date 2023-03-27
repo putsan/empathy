@@ -1,0 +1,155 @@
+.experience {
+  position: relative;
+  @include flex-centering(column);
+
+  &__ellipse {
+    position: absolute;
+    @include size(444px);
+    top: 0;
+
+    border: 2px solid $contrast-color;
+    border-radius: 50%;
+
+    opacity: 0.2;
+    z-index: -1;
+
+    @include _480 {
+      top: -133px;
+      left: -180px;
+    }
+
+    @include _768 {
+      @include size(531px)
+    }
+  }
+
+  &__list {
+    @include flex-centering(column);
+    margin-bottom: 46px;
+    padding: 42px 0;
+
+    overflow-x: hidden;
+
+    @include _480 {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0 var(--vertical-space) calc(var(--horizontal-space) / 2);
+      padding: 22px 36px;
+
+      background: $white;
+
+      box-shadow: 6px 6px 38px rgba(121, 101, 89, 0.18);
+      border-radius: 90px;
+
+      transform: translateY(-10%);
+      overflow: visible;
+    }
+
+    @include _768 {
+      flex-wrap: nowrap;
+      transform: translateY(-50%);
+      margin-bottom: 0;
+    }
+
+    @include _980 {
+      padding: 22px 72px;
+    }
+  }
+
+  &__item {
+    @include flex-centering(column);
+
+    @include _max(479px) {
+      &:not(:last-child) {
+        margin-bottom: 42px;
+      }
+    }
+
+    @include _480(767px) {
+      position: relative;
+      width: 50%;
+
+      &:nth-child(-n + 2) {
+        margin-bottom: 22px;
+      }
+
+      &:nth-child(2n)::before {
+        content: "";
+        position: absolute;
+        @include size(1px, 100%);
+        left: 0;
+
+        background-color: $text-color;
+        opacity: 0.14;
+      }
+    }
+
+    @include _768 {
+      position: relative;
+      align-items: flex-start;
+
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+
+      &:first-child {
+        padding-right: 30px;
+      }
+
+      &:not(:first-child)::before {
+        content: "";
+        position: absolute;
+        @include size(1px, 68px);
+        left: -15px;
+
+        background-color: $text-color;
+        opacity: 0.14;
+      }
+    }
+
+    @include _1170 {
+      min-width: 160px;
+
+      &:not(:first-child) {
+        margin-left: 80px;
+      }
+
+      &:first-child {
+        padding-right: 40px;
+      }
+
+      &:not(:first-child)::before {
+        left: -40px;
+      }
+    }
+  }
+
+  &__number {
+    margin-bottom: 4px;
+
+    color: $contrast-color;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+
+    @include _768 {
+      margin-bottom: 8px;
+
+      font-size: 28px;
+line-height: 36px;
+    }
+  }
+
+  &__label {
+    max-width: 100px;
+
+    text-align: center;
+
+    opacity: 0.7;
+
+    @include _480 {
+      max-width: none;
+      white-space: nowrap;
+    }
+  }
+}

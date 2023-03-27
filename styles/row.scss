@@ -1,0 +1,18 @@
+.row {
+  padding: 0 var(--vertical-space); /*changes by rules in the _var file dependent on a screen  */
+  margin-bottom: var(--horizontal-space);
+
+  @include _768 {
+    max-width: calc(1200px + var(--vertical-space) * 2);
+    margin: auto;
+    margin-bottom: var(--horizontal-space);
+  }
+
+  &__title {
+    margin-bottom: var(--row-title-mb);
+
+    @include _768 {
+      margin-bottom: var(--row-title-mb);
+    }
+  }
+}
