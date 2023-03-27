@@ -16,7 +16,7 @@
     @include _480 {
       display: flex;
       position: absolute;
-      bottom: calc(38px + (var(--button-size) / 2));
+      bottom: calc(44px + (var(--button-size) / 2));
       flex-wrap: wrap;
 
       font-weight: 600;

@@ -29,9 +29,8 @@ export default function Home({ allPostsData }) {
             priority
             src="/images/poster-d.jpg"
             className="intro__poster"
-            // height={154}
-            // width={320}
-            fill
+            height={1800}
+            width={800}
             alt="На фото Підгородний  Павло Михайлович"
           />
         </div>
@@ -147,8 +146,8 @@ export default function Home({ allPostsData }) {
             <Image
               src="/images/mind.svg"
               className="about__image"
-              height={157}
-              width={157}
+              height={400}
+              width={399}
               alt="Зображення силуету голови людини з мозком у ній"
             />
 
@@ -251,8 +250,8 @@ export default function Home({ allPostsData }) {
                 <Image
                   src={img}
                   className="post__image"
-                  width={335}
-                  height={170}
+                  width={1200}
+                  height={360}
                   alt=""
                 />
                 <Date dateString={date} className="post__date" />

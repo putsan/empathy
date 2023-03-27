@@ -31,10 +31,11 @@
   }
 
   &__logo {
-    height: 18.5px;
+    @include size(82.21px, 18.5px);
+    margin-top: 4px;
 
     @include _768 {
-      height: 36px;
+      @include size(160px, 36px);
     }
   }
 

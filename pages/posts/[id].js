@@ -35,8 +35,8 @@ export default function Post({ postData }) {
         <Image
           src={img}
           className="post__image"
-          width={335}
-          height={170}
+          width={1200}
+          height={360}
           alt=""
         />
 
