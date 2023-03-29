@@ -37,14 +37,9 @@ export default function Layout({ children, home }) {
   return (
     <div>
       <Head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
-        <link
-          href="/fonts/mont/stylesheet.css"
-          rel="stylesheet"
-          type="text/css"
-        />
         {/* <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -83,8 +78,8 @@ export default function Layout({ children, home }) {
             </Link>
           </div>
 
-          <div className="navigation__menu">
-            <ul className="navigation__list">
+          <div className="navigation__menu" color="red">
+            <ul className="navigation__list" color="blue">
               <li className="navigation__item">
                 <Link
                   href="/#services"
