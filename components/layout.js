@@ -146,7 +146,7 @@ export default function Layout({ children, home }) {
                 name="name"
                 id="username"
                 className="form__input"
-                pattern="[a-z]|[A-Z]|[а-я]|[А-Я]"
+                // pattern="[a-z]|[A-Z]|[а-я]|[А-Я]"
                 minLength="3"
                 required
               />
