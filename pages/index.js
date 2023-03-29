@@ -250,8 +250,9 @@ export default function Home({ allPostsData }) {
                 <Image
                   src={img}
                   className="post__image"
-                  width={1200}
-                  height={360}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
                   alt=""
                 />
                 <Date dateString={date} className="post__date" />
@@ -262,22 +263,22 @@ export default function Home({ allPostsData }) {
                 <main className="post__content ">
                   <div dangerouslySetInnerHTML={{ __html: excerpt }} />
 
-                  <div class="posts-list__footer">
-                    <p class="posts-list__author">Підгородний Павло Михайлович</p>
-                    <p class="posts-list__contacts">
+                  <div className="posts-list__footer">
+                    <p className="posts-list__author">Підгородний Павло Михайлович</p>
+                    <p className="posts-list__contacts">
                       Тел.
-                      <a class="posts-list__phone" href="tel:+380632404508">0632404508</a>
-                      <a class="posts-list__phone" href="tel:+380679802165">0679802165</a>
+                      <a className="posts-list__phone" href="tel:+380632404508">0632404508</a>
+                      <a className="posts-list__phone" href="tel:+380679802165">0679802165</a>
                     </p>
                   </div>
                 </main>
 
-                <button class="posts-list__button button button--gray button--s">
+                <button className="posts-list__button button button--gray button--s">
                   <Link href={`/posts/${id}`} className="button__link">
-                    <span class="button__text">Читати далі</span>
-                    <div class="button__icon">
-                      <svg class="button__arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <g id="right-arrow" stroke="#F8F9F8" stroke-width="6" stroke-linecap="round">
+                    <span className="button__text">Читати далі</span>
+                    <div className="button__icon">
+                      <svg className="button__arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <g id="right-arrow" stroke="#F8F9F8" strokeWidth="6" strokeLinecap="round">
                           <line x1="5" y1="50" x2="95" y2="50"></line>
                           <line x1="58" y1="13" x2="95" y2="50"></line>
                           <line x1="58" y1="87" x2="95" y2="50"></line>
