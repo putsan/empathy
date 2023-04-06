@@ -63,7 +63,7 @@ export default function Post({ postData }) {
             </p>
           </div>
 
-          <button className="post__button button button--gray button--s">
+          <button type="button" className="post__button button button--gray button--s">
             <Link href="/" className="button__link">
               <span className="button__text">Перейти на головну</span>
               <div className="button__icon">
