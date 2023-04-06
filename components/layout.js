@@ -194,7 +194,7 @@ export default function Layout({ children, home }) {
               </span>
             </label>
 
-            <button type="button" type="submit" className="form__button">
+            <button type="submit" className="form__button">
               Записатись
             </button>
           </form>
