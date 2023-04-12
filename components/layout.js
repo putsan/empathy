@@ -37,11 +37,11 @@ export default function Layout({ children, home }) {
   return (
     <div>
       <Head>
-        <html lang="uk-UA" />
+        {/* <html lang="uk-UA" /> */}
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/public/images/favicon.ico" />
         <meta name="description" content="Приватний психолог у Львові. Консультація психолога Львів. Актуальні ціни. Фахівець з психології, Підгородний Павло."/>
         {/* <meta
           property="og:image"
