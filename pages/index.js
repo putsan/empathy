@@ -42,7 +42,7 @@ export default function Home({ allPostsData }) {
           </h1>
           <p className="intro__sub-title">Завжди в житті з довірою.</p>
 
-          <button className="button button--contrast">
+          <button type="button" className="button button--contrast">
             <a href="#contact-form" className="button__link">
               <span className="button__text">Записатись</span>
               <div className="button__icon">
@@ -257,7 +257,7 @@ export default function Home({ allPostsData }) {
                 />
                 <Date dateString={date} className="post__date" />
                 <Link href={`/posts/${id}`}>
-                  <h4 className="post__title">{title}</h4>
+                  <h3 className="post__title">{title}</h3>
                 </Link>
 
                 <main className="post__content ">
@@ -273,7 +273,7 @@ export default function Home({ allPostsData }) {
                   </div>
                 </main>
 
-                <button className="posts-list__button button button--gray button--s">
+                <button type="button" className="posts-list__button button button--gray button--s">
                   <Link href={`/posts/${id}`} className="button__link">
                     <span className="button__text">Читати далі</span>
                     <div className="button__icon">

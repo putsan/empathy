@@ -40,11 +40,8 @@ export default function Layout({ children, home }) {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
-        {/* <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        /> */}
+        <link rel="icon" href="/public/images/favicon.ico" />
+        <meta name="description" content="Приватний психолог у Львові. Консультація психолога Львів. Актуальні ціни. Фахівець з психології, Підгородний Павло."/>
         {/* <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -119,7 +116,7 @@ export default function Layout({ children, home }) {
             </ul>
           </div>
 
-          <button className="navigation__button">
+          <button type="button" className="navigation__button">
             <a href="#contact-form" className="navigation__btn-link">
               Записатись
             </a>
